@@ -35,6 +35,7 @@
   </div>
 
   <section>
+    <h2>Услуги</h2>
     <article>
       <img src="./assets/img/illustration-1.png" width="300" height="146" alt="notebook">
       <h3>Веб-сайты</h3>
@@ -58,6 +59,7 @@
   </section>
 
   <section>
+    <h2>О нас</h2>
     <p>Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
     <p>Исповедуем принципы минимализма и чистоты. Ставим математически</p>
 
@@ -70,6 +72,7 @@
   </section>
 
   <section>
+    <h2>Преимущества</h2>
     <img src="./assets/img/nerds-illustration.png" width="360" height="208" alt="logo">
     <p>c 2004 года любим точность во всем:</p>
     <dl>
@@ -84,30 +87,67 @@
     </dl>
   </section>
 
-  <div>
+  <section>
+    <h3>Клиенты</h3>
     <ul>
       <li><img src="./assets/img/brands/logo-1.png" width="199" height="68" alt="html-academy"></li>
       <li><img src="./assets/img/brands/logo-2.png" width="209" height="87" alt="borodinski barbershop"></li>
       <li><img src="./assets/img/brands/logo-3.png" width="185" height="52" alt="pink"></li>
       <li><img src="./assets/img/brands/logo-4.png" width="173" height="84" alt="mishka"></li>
     </ul>
-  </div>
+  </section>
 
   <div>
     <!--map-->
-    <div>
-      <h4>NЁRDS DESIGN STUDIO</h4>
+    <section>
+      <h3>Адрес</h3>
       <p>
+        <span>NЁRDS DESIGN STUDIO</span><br>
         191186, Санкт-Петербург,<br>
         ул. Б. Конюшенная, д. 19/8
       </p>
-      <a href="tel:+78122757575">+7(812)275-75-75</a>
-    </div>
+      <a href="tel:+78122757575">+7 (812) 275-75-75</a>
+      <button type="button">Напишите нам</button>
+    </section>
   </div>
 </main>
 
 <footer>
-  <!--TODO-->
+  <ul>
+    <li><a href="#">Vkontakte</a></li>
+    <li><a href="#">Facebook</a></li>
+    <li><a href="#">Instagram</a></li>
+  </ul>
+
+  <div>
+    <span>Давайте дружить, это выгодно!</span>
+    <p>
+      Скидка 10% для друзей из социальных сетей.
+    </p>
+  </div>
 </footer>
+
+<div class="popup">
+  <b class="btn-close">x</b>
+  <p>Напишите нам</p>
+
+  <form action="" novalidate>
+    <label>
+      Ваше имя:
+      <input type="text" name="name" autocomplete="off" placeholder="Имя Фамилия">
+    </label>
+
+    <label>
+      Ваш e-mail:
+      <input type="email" name="email" autocomplete="off" placeholder="email@example.com">
+    </label>
+
+    <label for="message">Текст письма:</label>
+    <textarea name="message" id="message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+
+    <button type="submit">Отправить</button>
+  </form>
+</div>
+
 </body>
 </html>
