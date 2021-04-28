@@ -2,14 +2,30 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Nerds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="дизайн макеты продукт студия заказ">
+  <meta name="description" content="Мы — маленькая, но гордая дизайн-студия из Краснодара.
+    Исповедуем принципы минимализма и чистоты. Ставим математический расчет
+    превыше креатива. Работаем не покладая рук, как роботы.">
+
+  <title>Nerds - дизайн-студия</title>
+
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Дизайн-студия Nerds">
+  <meta property="og:description" content="Мы — маленькая, но гордая дизайн-студия из Краснодара.
+    Исповедуем принципы минимализма и чистоты. Ставим математический расчет
+    превыше креатива. Работаем не покладая рук, как роботы.">
+  <meta property="og:image" content="./assets/img/nerds-illustration.png">
 
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
 <header>
+  <h1 class="visually-hidden">Дизайн-студия Nerds</h1>
+
   <a class="logo">
-    <img src="assets/img/svg/nerds-logo.svg" width="160" height="65" alt="logo">
+    <img src="./assets/img/svg/nerds-logo.svg" width="160" height="65" alt="logo">
   </a>
 
   <nav>
@@ -27,31 +43,46 @@
 </header>
 
 <main>
-  <h1>Дизайн-студия Nerds</h1>
-  <div>
-    <p>Долго, дорого, скрупулезно.</p>
-    <p>Математически выверенный дизайн для вашего сайта или мобильного проложения.</p>
-    <button type="button">Узнать больше</button>
-  </div>
+  <section class="slider slider-list">
+    <h2 class="visually-hidden">Слайдер</h2>
+
+    <div class="slider-item item-1">
+      <p>Долго, дорого, скрупулезно</p>
+      <p>Математически выверенный дизайн для вашего сайта или мобильного проложения.</p>
+      <button type="button">Узнать больше</button>
+    </div>
+
+    <div class="slider-item item-2">
+      <p>Любим математику как никто другой</p>
+      <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+      <button type="button">Узнать больше</button>
+    </div>
+
+    <div class="slider-item item-3">
+      <p>Только ночь, только хардкор</p>
+      <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+      <button type="button">Узнать больше</button>
+    </div>
+  </section>
 
   <section>
-    <h2>Услуги</h2>
+    <h2 class="visually-hidden">Услуги</h2>
     <article>
-      <img src="./assets/img/illustration-1.png" width="300" height="146" alt="notebook">
+      <img src="./assets/img/illustration-1.png" width="300" height="146" alt="Ноутбук на экране которого изображен сайт">
       <h3>Веб-сайты</h3>
       <p>Мир никогда не будет прежним после того как увидит наш сайт!</p>
       <button type="button">Заказать</button>
     </article>
 
     <article>
-      <img src="./assets/img/illustration-2.png" width="300" height="146" alt="mobile">
+      <img src="./assets/img/illustration-2.png" width="300" height="146" alt="Мобильный телефон на экране которого изображен готовый продукт">
       <h3>Приложения</h3>
       <p>Покорите топ-10 приложений в AppStore и Google Play</p>
       <button type="button">Заказать</button>
     </article>
 
     <article>
-      <img src="./assets/img/illustration-3.png" width="300" height="146" alt="desc">
+      <img src="./assets/img/illustration-3.png" width="300" height="146" alt="Изображение презентации с элементами диаграмм">
       <h3>Презентации</h3>
       <p>Вы даже не подозреваете, насколько вы изумительны!</p>
       <button type="button">Заказать</button>
@@ -59,9 +90,12 @@
   </section>
 
   <section>
-    <h2>О нас</h2>
+    <h2 class="visually-hidden">О нас</h2>
     <p>Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-    <p>Исповедуем принципы минимализма и чистоты. Ставим математически</p>
+    <p>
+      Исповедуем принципы минимализма и чистоты. Ставим математический расчет
+      превыше креатива. Работаем не покладая рук, как роботы.
+    </p>
 
     <p>Выполняем заказы на разработку:</p>
     <ul>
@@ -72,7 +106,7 @@
   </section>
 
   <section>
-    <h2>Преимущества</h2>
+    <h2 class="visually-hidden">Преимущества</h2>
     <img src="./assets/img/nerds-illustration.png" width="360" height="208" alt="logo">
     <p>c 2004 года любим точность во всем:</p>
     <dl>
@@ -88,7 +122,7 @@
   </section>
 
   <section>
-    <h3>Клиенты</h3>
+    <h3 class="visually-hidden">Клиенты</h3>
     <ul>
       <li><img src="./assets/img/brands/logo-1.png" width="199" height="68" alt="html-academy"></li>
       <li><img src="./assets/img/brands/logo-2.png" width="209" height="87" alt="borodinski barbershop"></li>
@@ -100,9 +134,9 @@
   <div>
     <!--map-->
     <section>
-      <h3>Адрес</h3>
+      <h3 class="visually-hidden">Адрес</h3>
+      <p>NЁRDS DESIGN STUDIO</p>
       <p>
-        <span>NЁRDS DESIGN STUDIO</span><br>
         191186, Санкт-Петербург,<br>
         ул. Б. Конюшенная, д. 19/8
       </p>
@@ -114,24 +148,22 @@
 
 <footer>
   <ul>
-    <li><a href="#">Vkontakte</a></li>
-    <li><a href="#">Facebook</a></li>
-    <li><a href="#">Instagram</a></li>
+    <li><a href="#" aria-label="Вконтакте"></a></li>
+    <li><a href="#" aria-label="Фейсбук"></a></li>
+    <li><a href="#" aria-label="Инстаграм"></a></li>
   </ul>
 
   <div>
-    <span>Давайте дружить, это выгодно!</span>
-    <p>
-      Скидка 10% для друзей из социальных сетей.
-    </p>
+    <p>Давайте дружить, это выгодно!</p>
+    <p>Скидка 10% для друзей из социальных сетей.</p>
   </div>
 </footer>
 
-<div class="popup">
+<div hidden class="popup">
   <b class="btn-close">x</b>
   <p>Напишите нам</p>
 
-  <form action="" novalidate>
+  <form action="https://echo.htmlacademy.ru" method="POST" novalidate>
     <label>
       Ваше имя:
       <input type="text" name="name" autocomplete="off" placeholder="Имя Фамилия">
