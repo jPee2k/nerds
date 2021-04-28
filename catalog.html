@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="дизайн макеты продукт студия заказ каталог">
+  <meta name="description" content="Каталог с работами дизайн-студии Nerds">
+
+  <title>Каталог - Nerds</title>
+
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Каталог дизайн-студии Nerds">
+  <meta property="og:description" content="Каталог с работами дизайн-студии Nerds">
+  <meta property="og:image" content="./assets/img/nerds-illustration.png">
+
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+<header>
+  <h1>Магазин готовых шаблонов</h1>
+
+  <a class="logo">
+    <img src="./assets/img/svg/nerds-logo.svg" width="160" height="65" alt="logo">
+  </a>
+
+  <nav>
+    <ul>
+      <li><a href="#">Студия</a></li>
+      <li><a href="#">Клиенты</a></li>
+      <li><a href="#">Магазин</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+
+    <ul>
+      <li><a href="#">Корзина</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!--TODO-->
+</main>
+
+<aside>
+  <h3 class="visually-hidden">Фильтр товаров</h3>
+
+  <form action="https://echo.htmlacademy.ru" method="GET">
+    <fieldset>
+      <legend>Стоимость:</legend>
+
+      <label for="price-range"></label>
+      <input type="range" id="price-range">
+
+      <label for="price-min">От</label>
+      <input type="number" id="price-min" name="price-min">
+
+      <label for="price-max">До</label>
+      <input type="number" id="price-max" name="price-max">
+    </fieldset>
+
+    <fieldset>
+      <legend>Сетка:</legend>
+
+      <label>
+        <input type="radio" name="grid-style" value="adaptive" checked>
+        Адаптивная
+      </label>
+
+      <label>
+        <input type="radio" name="grid-style" value="fixed">
+        Фиксированная
+      </label>
+
+      <label>
+        <input type="radio" name="grid-style" value="flexible">
+        Резиновая
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Особенности:</legend>
+
+      <label>
+        <input type="checkbox" name="slider" checked>
+        Слайдер
+      </label>
+
+      <label>
+        <input type="checkbox" name="advantages-block">
+        блок преимуществ
+      </label>
+
+      <label>
+        <input type="checkbox" name="news" checked>
+        Новости
+      </label>
+
+      <label>
+        <input type="checkbox" name="gallery">
+        Галерея
+      </label>
+
+      <label>
+        <input type="checkbox" name="cart">
+        Корзина
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Сортировать:</legend>
+
+      <input type="hidden" name="order-by" value="price">
+      <input type="hidden" name="sort" value="DESC">
+
+      <ul class="order">
+        <li>
+          <button type="button">По цене</button>
+        </li>
+        <li>
+          <button type="button">По типу</button>
+        </li>
+        <li>
+          <button type="button">По названию</button>
+        </li>
+      </ul>
+
+      <ul class="sort">
+        <li>
+          <button type="button" aria-label="По возростанию"></button>
+        </li>
+        <li>
+          <button type="button" aria-label="По убыванию"></button>
+        </li>
+      </ul>
+    </fieldset>
+
+    <button type="submit">Показать</button>
+  </form>
+</aside>
+
+<footer>
+  <ul>
+    <li><a href="#" aria-label="Вконтакте"></a></li>
+    <li><a href="#" aria-label="Фейсбук"></a></li>
+    <li><a href="#" aria-label="Инстаграм"></a></li>
+  </ul>
+
+  <div>
+    <p>Давайте дружить, это выгодно!</p>
+    <p>Скидка 10% для друзей из социальных сетей.</p>
+  </div>
+</footer>
+
+<div hidden class="popup">
+  <b class="btn-close">x</b>
+  <p>Напишите нам</p>
+
+  <form action="https://echo.htmlacademy.ru" method="POST" novalidate>
+    <label>
+      Ваше имя:
+      <input type="text" name="name" autocomplete="off" placeholder="Имя Фамилия">
+    </label>
+
+    <label>
+      Ваш e-mail:
+      <input type="email" name="email" autocomplete="off" placeholder="email@example.com">
+    </label>
+
+    <label for="message">Текст письма:</label>
+    <textarea name="message" id="message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+
+    <button type="submit">Отправить</button>
+  </form>
+</div>
+
+</body>
+</html>
