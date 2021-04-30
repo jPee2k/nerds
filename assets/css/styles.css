@@ -11,3 +11,259 @@
 [hidden] {
   display: none
 }
+
+/**
+ * Font settings
+ * Roboto [regular, medium, bold]
+ */
+
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('../fonts/roboto.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/roboto.woff') format('woff'); /* Modern Browsers */
+}
+
+/* roboto-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+  url('../fonts/robotomedium.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/robotomedium.woff') format('woff'); /* Modern Browsers */
+}
+
+/* roboto-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+  url('../fonts/robotobold.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/robotobold.woff') format('woff'); /* Modern Browsers */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  color: black;
+}
+
+.btn {
+  box-sizing: border-box;
+
+  height: 50px;
+  padding-left: 54px;
+  padding-right: 54px;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+
+  border-radius: 2px;
+
+  cursor: pointer;
+}
+
+/**
+ * HEADER
+ */
+
+.top-bgc {
+  background-color: #eeeeee;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 49px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 18px;
+}
+
+.header .header-logo {
+  max-width: 160px;
+  max-height: 65px;
+}
+
+.header .main-nav,
+.header .user-nav {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.user-nav .cart-wrapper,
+.main-nav .nav-list {
+  display: flex;
+  justify-content: space-between;
+
+  list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+
+  margin-top: 32px;
+}
+
+.main-nav .nav-list {
+  width: 440px;
+}
+
+.main-nav a,
+.user-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-nav a:hover,
+.user-nav a:hover {
+  color: #fb565a;
+}
+
+.main-nav a:active,
+.user-nav a:active {
+  padding-bottom: 13px;
+
+  border-bottom: 2px solid #fb565a;
+}
+
+.nav-cart a::before {
+  content: url('../img/svg/cart-icon.svg');
+
+  padding-right: 25px;
+}
+
+
+/**
+ * MAIN
+ */
+.main-content {
+  margin: 0 auto;
+  max-width: 1200px;
+
+  background-color: #fff;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slide-picker {
+  position: absolute;
+  bottom: 96px;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.picker {
+  position: relative;
+  display: inline-block;
+  border: 10px solid white;
+  border-radius: 10px;
+
+  margin-left: 13px;
+
+  cursor: pointer;
+}
+
+.slide-picker .active::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #c1c1c1;
+  border-radius: 4px;
+}
+
+.slider .container {
+  display: flex;
+
+  /*justify-content: space-between;*/
+}
+
+.slider .item-1 {
+  flex-basis: 380px;
+
+  padding-top: 68px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.slider .slider-image {
+  flex-grow: 1;
+  padding-right: 20px;
+}
+
+.slider-image img {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider-item p:first-child {
+  margin-top: 0;
+  margin-bottom: 29px;
+
+  font-size: 55px;
+  line-height: 55px;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.slider-item p {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: inherit;
+  font-weight: 400;
+
+  color: #283136;
+}
+
+.slider-item p:last-of-type {
+  margin-bottom: 44px;
+}
+
+.btn-info {
+  border: 1px solid #fb565a;
+  background-color: #fb565a;
+}
+
+.btn-info:hover {
+  background-color: #e74246;
+}
+
+.btn-info:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #d7373b;
+}
+
+.services .container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.services .product {
+  flex-basis: 300px;
+
+  padding-right: 100px;
+}

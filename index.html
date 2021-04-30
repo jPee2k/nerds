@@ -18,78 +18,113 @@
     превыше креатива. Работаем не покладая рук, как роботы.">
   <meta property="og:image" content="./assets/img/nerds-illustration.png">
 
+  <link rel="stylesheet" href="./assets/css/normalize.css">
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-<header>
-  <h1 class="visually-hidden">Дизайн-студия Nerds</h1>
+<div class="top-bgc">
+  <header class="header">
+    <h1 class="visually-hidden">Дизайн-студия Nerds</h1>
 
-  <a class="logo">
-    <img src="./assets/img/svg/nerds-logo.svg" width="160" height="65" alt="logo">
-  </a>
+    <div class="container">
+      <a class="header-logo">
+        <img src="./assets/img/svg/nerds-logo.svg" width="160" height="65" alt="logo">
+      </a>
 
-  <nav>
-    <ul>
-      <li><a href="#">Студия</a></li>
-      <li><a href="#">Клиенты</a></li>
-      <li><a href="#">Магазин</a></li>
-      <li><a href="#">Контакты</a></li>
-    </ul>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#">Студия</a></li>
+          <li class="nav-item"><a href="#">Клиенты</a></li>
+          <li class="nav-item"><a href="#">Магазин</a></li>
+          <li class="nav-item"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
 
-    <ul>
-      <li><a href="#">Корзина</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-  <section class="slider slider-list">
-    <h2 class="visually-hidden">Слайдер</h2>
-
-    <div class="slider-item item-1">
-      <p>Долго, дорого, скрупулезно</p>
-      <p>Математически выверенный дизайн для вашего сайта или мобильного проложения.</p>
-      <button type="button">Узнать больше</button>
+      <div class="user-nav">
+        <ul class="cart-wrapper">
+          <li class="nav-item nav-cart"><a href="#">Корзина</a></li>
+        </ul>
+      </div>
     </div>
+  </header>
 
-    <div class="slider-item item-2">
-      <p>Любим математику как никто другой</p>
-      <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-      <button type="button">Узнать больше</button>
+  <div class="slider-wrapper">
+    <section class="slider slider-list">
+      <h2 class="visually-hidden">Слайдер</h2>
+
+      <div class="container">
+        <div class="slider-item item-1">
+          <p>Долго, дорого, скрупулезно.</p>
+          <p>Математически выверенный дизайн<br>
+            для вашего сайта или мобильного проложения.</p>
+          <button type="button" class="btn btn-info">Узнать больше</button>
+        </div>
+        <div class="slider-image">
+          <img class="image-1" src="assets/img/slider/slide1.png" alt="">
+        </div>
+      </div>
+
+      <div class="container">
+        <div hidden class="slider-item item-2">
+          <p>Любим математику как никто другой.</p>
+          <p>Никакого креатива, только математические формулы<br>
+            для расчета идеальных пропорций.</p>
+          <button type="button" class="btn btn-info">Узнать больше</button>
+        </div>
+        <div hidden class="slider-image">
+          <img class="image-2" src="assets/img/slider/slide2.png" alt="">
+        </div>
+      </div>
+
+      <div class="container">
+        <div hidden class="slider-item item-3">
+          <p>Только ночь, только хардкор.</p>
+          <p>Работать днем, как все? Мы против этого.<br>
+            Ближе к полуночи работа только начинается.</p>
+          <button type="button" class="btn btn-info">Узнать больше</button>
+        </div>
+        <div hidden class="slider-image">
+          <img class="image-3" src="assets/img/slider/slide3.png" alt="">
+        </div>
+      </div>
+    </section>
+    <div class="slide-picker">
+      <span class="picker active"></span>
+      <span class="picker"></span>
+      <span class="picker"></span>
     </div>
+  </div>
+</div>
 
-    <div class="slider-item item-3">
-      <p>Только ночь, только хардкор</p>
-      <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-      <button type="button">Узнать больше</button>
-    </div>
-  </section>
-
-  <section>
+<main class="main-content">
+  <section class="services">
     <h2 class="visually-hidden">Услуги</h2>
-    <article>
-      <img src="./assets/img/illustration-1.png" width="300" height="146"
-           alt="Ноутбук на экране которого изображен сайт">
-      <h3>Веб-сайты</h3>
-      <p>Мир никогда не будет прежним после того как увидит наш сайт!</p>
-      <button type="button">Заказать</button>
-    </article>
 
-    <article>
-      <img src="./assets/img/illustration-2.png" width="300" height="146"
-           alt="Мобильный телефон на экране которого изображен готовый продукт">
-      <h3>Приложения</h3>
-      <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-      <button type="button">Заказать</button>
-    </article>
+    <div class="container">
+      <article class="product">
+        <img src="./assets/img/illustration-1.png" width="300" height="146"
+             alt="Ноутбук на экране которого изображен сайт">
+        <h3>Веб-сайты</h3>
+        <p>Мир никогда не будет прежним после того как увидит наш сайт!</p>
+        <button type="button" class="btn">Заказать</button>
+      </article>
 
-    <article>
-      <img src="./assets/img/illustration-3.png" width="300" height="146"
-           alt="Изображение презентации с элементами диаграмм">
-      <h3>Презентации</h3>
-      <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-      <button type="button">Заказать</button>
-    </article>
+      <article class="product">
+        <img src="./assets/img/illustration-2.png" width="300" height="146"
+             alt="Мобильный телефон на экране которого изображен готовый продукт">
+        <h3>Приложения</h3>
+        <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+        <button type="button" class="btn">Заказать</button>
+      </article>
+
+      <article class="product">
+        <img src="./assets/img/illustration-3.png" width="300" height="146"
+             alt="Изображение презентации с элементами диаграмм">
+        <h3>Презентации</h3>
+        <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+        <button type="button" class="btn">Заказать</button>
+      </article>
+    </div>
   </section>
 
   <section>
@@ -158,7 +193,7 @@
 
   <div>
     <p>Давайте дружить, это выгодно!</p>
-    <p>Скидка 10% для друзей из социальных сетей.</p>
+    <p>Скидка 10% для друзей из социальных сетей.1233</p>
   </div>
 </footer>
 
