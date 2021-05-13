@@ -236,25 +236,26 @@
   </div>
 </footer>
 
-<section id="contact-us-popup" class="popup contact-us popup-hidden">
+<section id="contact-us-popup" class="popup contact-us">
   <div class="popup-body popup-close">
     <div class="popup-content">
       <button type="button" class="btn-close popup-close"></button>
       <p>Напишите нам</p>
 
-      <form class="contact-us-form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
+      <form id="contact-us-form" class="contact-us-form" action="https://echo.htmlacademy.ru" method="POST">
         <label class="input-label">
           Ваше имя:<br>
-          <input class="invalid" type="text" name="name" autocomplete="off" placeholder="Имя Фамилия" required>
+          <!--class="invalid"-->
+          <input class="input" type="text" name="name" autocomplete="off" placeholder="Имя Фамилия">
         </label>
 
         <label class="input-label">
           Ваш e-mail:<br>
-          <input type="email" name="email" autocomplete="off" placeholder="email@example.com" required>
+          <input class="input" type="email" name="email" autocomplete="off" placeholder="email@example.com">
         </label>
 
-        <label for="message" class="textarea-label">Текст письма:<br>
-          <textarea name="message" id="message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        <label class="textarea-label">Текст письма:<br>
+          <textarea class="input" name="message" id="message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
         </label>
 
         <button class="btn btn-info" type="submit">Отправить</button>

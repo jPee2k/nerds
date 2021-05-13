@@ -8,11 +8,6 @@
   overflow: hidden;
 }
 
-.popup-hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
 [hidden] {
   display: none;
 }
@@ -47,6 +42,42 @@
   font-weight: 700;
   src: local(''),
   url('../fonts/robotobold.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/robotobold.woff') format('woff'); /* Modern Browsers */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translateX(-20px);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(20px);
+  }
 }
 
 body {
@@ -685,6 +716,9 @@ ul {
 }
 
 .popup {
+  opacity: 0;
+  visibility: hidden;
+
   position: fixed;
 
   top: 0;
@@ -700,6 +734,19 @@ ul {
   overflow-x: hidden;
 }
 
+.popup-show {
+  opacity: 1;
+  visibility: visible;
+
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+
+.popup-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+
 .contact-us .popup-body {
   box-sizing: border-box;
 
@@ -710,8 +757,6 @@ ul {
   padding: 30px 10px;
 
   min-height: 100%;
-
-
 }
 
 .contact-us .popup-content {
@@ -819,7 +864,6 @@ body.lock {
 .contact-us-form textarea:focus::placeholder {
   color: #444444;
 }
-
 
 .contact-us-form .btn {
   width: 260px;
