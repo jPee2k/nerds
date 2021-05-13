@@ -602,8 +602,16 @@ ul {
   position: relative;
 
   background-image: url("../img/map.png");
-  max-width: 1440px;
+  background-size: cover;
+  width: auto;
   height: 416px;
+
+  padding: 0;
+}
+
+.footer-map iframe {
+  box-sizing: border-box;
+  max-width: 1200px;
 }
 
 .footer-map .address {
