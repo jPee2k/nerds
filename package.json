@@ -1,0 +1,74 @@
+{
+  "name": "@html-academy/code",
+  "version": "2.0.0",
+  "description": "frontend development",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --bail",
+    "test-windows": "node --experimental-vm-modules --no-warnings node_modules/jest/bin/jest --bail",
+    "dev": "webpack --node-env development",
+    "prod": "webpack --node-env production",
+    "watch": "webpack --watch --node-env development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jPee2k/nerds.git"
+  },
+  "keywords": [
+    "html-academy",
+    "study",
+    "html",
+    "css"
+  ],
+  "author": "jPee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jPee2k/nerds.git/issues"
+  },
+  "homepage": "https://github.com/jPee2k/nerds.git#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/eslint-parser": "^7.14.7",
+    "@babel/preset-env": "^7.14.8",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.0.6",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.23.2",
+    "eslint-plugin-jest": "^24.3.6",
+    "favicons": "^6.2.2",
+    "favicons-webpack-plugin": "^5.0.2",
+    "html-webpack-plugin": "^5.3.2",
+    "i18next": "^20.4.0",
+    "jest": "^27.0.1",
+    "jest-cli": "^27.0.6",
+    "lodash": "^4.17.21",
+    "lodash-cli": "^4.17.5",
+    "mini-css-extract-plugin": "^2.2.0",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "autoprefixer": "^10.3.4",
+    "copy-webpack-plugin": "^9.0.1"
+  },
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/",
+    "testEnvironment": "jsdom"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "regenerator-runtime": "^0.13.9",
+    "axios": "^0.21.1",
+    "lodash": "^4.17.21",
+    "on-change": "^3.0.2"
+  }
+}

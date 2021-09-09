@@ -6,6 +6,8 @@
 *.psd
 
 node_modules/
+downloads/
+dist/
 npm-debug.*
 
 Thumbs.db
