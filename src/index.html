@@ -5,10 +5,10 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Nerds - дизайн-студия</title>
 </head>
 <body>
-<header class="page__header">
+<header class="page-header">
   <img src="" alt="" class="header__logo">
   <ul class="main-nav">
     <li class="main-nav__item"><a class="active">Студия</a></li>
@@ -20,7 +20,7 @@
     <li class="users-nav__item"><a href="#">Корзина</a></li>
   </ul>
 </header>
-<main class="page__main">
+<main class="page-main">
   <h1 class="visually_hidden">Дизайн студия</h1>
 
   <section class="slider">
@@ -76,6 +76,90 @@
       </div>
     </div>
   </section>
+
+  <div class="container">
+    <section class="about-us">
+      <h2 class="visually-hidden">Про нашу компанию</h2>
+      <p class="about-us__title">Мы — маленькая, но гордая
+        дизайн-студия из Краснодара. </p>
+      <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет
+        превыше креатива. Работаем не покладая рук, как роботы.</p>
+      <p class="about-us__list-title">Выполняем заказы на разработку:</p>
+      <ul class="about-us__list">
+        <li class="about-us__list-item">Веб-сайтов любой сложности</li>
+        <li class="about-us__list-item">Веб-сайтов любой сложности</li>
+        <li class="about-us__list-item">Слайдшоу и видео для корпоративных презентаций</li>
+      </ul>
+    </section>
+    <section class="stats">
+      <h2 class="visually-hidden">Статистика</h2>
+      <img src="" alt="Логотип компании - Nerds" class="logo-nerds">
+      <p class="quote">с 2004 года Любим точность во всем:</p>
+      <div class="stats__list">
+        <dl class="stats__list-item">
+          <dt>146<span>%</span></dt>
+          <dd>Уровень самоотдачи</dd>
+        </dl>
+        <dl class="stats__list-item">
+          <dt>100<span>%</span></dt>
+          <dd>Соблюдение сроков</dd>
+        </dl>
+        <dl class="stats__list-item">
+          <dt>50<span>%</span></dt>
+          <dd>Минимальная предоплата</dd>
+        </dl>
+      </div>
+    </section>
+  </div>
+
+  <section class="our-works">
+    <h2 class="visually-hidden">Наши работы</h2>
+    <ul class="our-works__list">
+      <li class="our-works__list-item"><a href="#"></a></li>
+      <li class="our-works__list-item"><a href="#"></a></li>
+      <li class="our-works__list-item"><a href="#"></a></li>
+      <li class="our-works__list-item"><a href="#"></a></li>
+    </ul>
+  </section>
+  <section class="map">
+    <h2 class="visually-hidden">Адрес</h2>
+    <!-- iframe map -->
+    <div class="address">
+      <h3 class="address__title">nerds design studio</h3>
+      <p>191186, Санкт-Петербург,<br>
+      ул. Б. Конюшенная, д. 19/8</p>
+      <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+      <button class="address__btn btn" type="button">Напишите нам</button>
+    </div>
+  </section>
+
 </main>
+<footer class="page-footer">
+  <div class="social">
+    <ul class="social__list">
+      <li class="social__list-item"><a href="#" target="_blank" rel="nofollow">Вконтакте</a></li>
+      <li class="social__list-item"><a href="#" target="_blank" rel="nofollow">Фейсбук</a></li>
+      <li class="social__list-item"><a href="#" target="_blank" rel="nofollow">Инстаграм</a></li>
+    </ul>
+  </div>
+  <div class="page-footer__content">
+    <p>Давайте дружить, это выгодно!</p>
+    <p>Скидка 10% для друзей из социальных сетей.</p>
+  </div>
+</footer>
+
+<div class="modal contact-us">
+  <h2 class="visually-hidden">Форма связи</h2>
+  <p>Напишите нам</p>
+  <form class="contact-us__form" action="" method="post" autocomplete="off">
+    <label for="name">Ваше имя:</label>
+    <input type="text" id="name" placeholder="Имя, Фамилия">
+    <label for="email">Ваш email:</label>
+    <input type="email" id="email" placeholder="email@example.com">
+    <label for="message">Текст письма:</label>
+    <textarea type="text" id="message" placeholder="В свободной форме"></textarea>
+    <button class="btn contact-us__btn" type="submit">Отправить</button>
+  </form>
+</div>
 </body>
 </html>
