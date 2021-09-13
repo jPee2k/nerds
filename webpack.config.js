@@ -36,6 +36,9 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(html)$/, use: ['html-loader'],
+      },
       { test: /\.css$/, use: ['style-loader', 'css-loader', 'postcss-loader'] },
       {
         test: /\.s[ac]ss$/i, use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
@@ -45,14 +48,21 @@ module.exports = {
         type: 'asset/resource',
         parser: { dataUrlCondition: { maxSize: 8192 } },
         generator: {
-          filename: 'fonts/[name].[ext]',
+          filename: 'fonts/[name][ext]',
         },
       },
       {
-        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+        test: /\.(ttf|eot)(\?[\s\S]+)?$/,
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[name].[ext]',
+          filename: 'fonts/[name][ext]',
+        },
+      },
+      {
+        test: /\.(svg|jpeg|jpg|png|webp|gif)(\?[\s\S]+)?$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[ext]/[name][ext]',
         },
       },
     ],
