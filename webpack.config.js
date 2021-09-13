@@ -1,8 +1,16 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+// const CopyPlugin = require('copy-webpack-plugin');
+
+const multipleHtmlPlugins = ['index', 'catalog']
+  .map((templateName) => {
+    return new HtmlWebpackPlugin({
+      filename: path.resolve(__dirname, `dist/${templateName}.html`),
+      template: `src/${templateName}.html`,
+    });
+  });
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
@@ -50,12 +58,13 @@ module.exports = {
     ],
   },
   plugins: [
+    ...multipleHtmlPlugins,
     new MiniCssExtractPlugin({
       filename: 'css/bundle.css',
     }),
     new HtmlWebpackPlugin({
-      filename: path.resolve(__dirname, 'dist/index.html'),
-      template: 'src/index.html',
+      filename: path.resolve(__dirname, 'dist/catalog.html'),
+      template: 'src/catalog.html',
     }),
     // new FaviconsWebpackPlugin({
     //   logo: path.resolve(__dirname, 'src/images/icons/favicon-512.png'),
