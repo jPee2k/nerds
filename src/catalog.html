@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Магазин готовых шаблонов</title>
+</head>
+<body>
+<header class="page-header">
+  <img src="" alt="" class="header__logo">
+  <ul class="main-nav">
+    <li class="main-nav__item"><a href="#">Студия</a></li>
+    <li class="main-nav__item"><a href="#">Клиенты</a></li>
+    <li class="main-nav__item"><a class="active">Магазин</a></li>
+    <li class="main-nav__item"><a href="#">Контакты</a></li>
+  </ul>
+  <ul class="users-nav">
+    <li class="users-nav__item"><a href="#">Корзина</a></li>
+  </ul>
+</header>
+
+<main class="page-main">
+  <h1 class="page-main__title">Магазин готовых шаблонов</h1>
+
+  <div class="container">
+    <aside class="filters">
+      <h2 class="visually-hidden">Фильтр продуктов</h2>
+
+      <form action="" method="GET" autocomplete="off">
+        <fieldset>
+          <legend>Сетка:</legend>
+          <label>
+            <input type="radio" name="grid" value="adaptive" checked>
+            Адаптивная
+          </label>
+          <label>
+            <input type="radio" name="grid" value="fixed">
+            Фиксированная
+          </label>
+          <label>
+            <input type="radio" name="grid" value="flexible">
+            Резиновая
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Особенности:</legend>
+          <label>
+            <input type="checkbox" name="peculiarities" value="slider" checked>
+            Слайдер
+          </label>
+          <label>
+            <input type="checkbox" name="peculiarities" value="services">
+            Блок преимуществ
+          </label>
+          <label>
+            <input type="checkbox" name="peculiarities" value="news" checked>
+            Новости
+          </label>
+          <label>
+            <input type="checkbox" name="peculiarities" value="gallery">
+            Галерея
+          </label>
+          <label>
+            <input type="checkbox" name="peculiarities" value="cart">
+            Корзина
+          </label>
+
+        </fieldset>
+        <fieldset class="order-by">
+          <legend>Сортировать:</legend>
+          <div class="order-by__values">
+            <label>
+              <input hidden type="radio" name="order" value="price" checked>
+              По цене
+            </label>
+            <label>
+              <input hidden type="radio" name="order" value="type">
+              По типу
+            </label>
+            <label>
+              <input hidden type="radio" name="order" value="name">
+              По названию
+            </label>
+          </div>
+          <div class="order-by__direction">
+            <label>
+              <input hidden type="radio" name="direction" value="ask">
+              icon down
+            </label>
+            <label>
+              <input hidden type="radio" name="direction" value="desc">
+              icon up
+            </label>
+          </div>
+        </fieldset>
+        <button class="btn filters__btn" type="button">Показать</button>
+      </form>
+    </aside>
+
+    <div class="content">
+      <h2 class="visually-hidden">Каталог работ</h2>
+
+      <ul class="content__list">
+        <li class="content__item">
+          <img src="" alt="">
+          <footer hidden>
+            <h3 class="content__title">Sedona</h3>
+            <p class="content__description">Информационный сайт для туристов</p>
+            <button class="content__btn btn" type="button">9 9900 руб.</button>
+          </footer>
+        </li>
+        <li class="content__item">
+          <img src="" alt="">
+          <footer hidden>
+            <h3 class="content__title">Pink</h3>
+            <p class="content__description">Lorem ipsum dolor sit amet.</p>
+            <button class="content__btn btn" type="button">9 9900 руб.</button>
+          </footer>
+        </li>
+        <li class="content__item">
+          <img src="" alt="">
+          <footer hidden>
+            <h3 class="content__title">Borodinski Barbershop</h3>
+            <p class="content__description">Lorem ipsum dolor sit amet, consectetur.</p>
+            <button class="content__btn btn" type="button">9 9900 руб.</button>
+          </footer>
+        </li>
+        <li class="content__item">
+          <img src="" alt="">
+          <footer hidden>
+            <h3 class="content__title">Mishka</h3>
+            <p class="content__description">Lorem ipsum dolor sit amet.</p>
+            <button class="content__btn btn" type="button">9 9900 руб.</button>
+          </footer>
+        </li>
+        <li class="content__item">
+          <img src="" alt="">
+          <footer hidden>
+            <h3 class="content__title">A plus</h3>
+            <p class="content__description">Lorem ipsum dolor sit amet.</p>
+            <button class="content__btn btn" type="button">9 9900 руб.</button>
+          </footer>
+        </li>
+        <li class="content__item">
+          <img src="" alt="">
+          <footer hidden>
+            <h3 class="content__title">Kvast</h3>
+            <p class="content__description">Lorem ipsum dolor sit amet, consectetur.</p>
+            <button class="content__btn btn" type="button">9 9900 руб.</button>
+          </footer>
+        </li>
+      </ul>
+
+      <div class="pagination">
+        <ul class="pagination__list">
+          <li class="pagination__item"><a hidden href="#">Предыдущая</a></li>
+          <li class="pagination__item"><a class="active">1</a></li>
+          <li class="pagination__item"><a href="#">2</a></li>
+          <li class="pagination__item"><a href="#">3</a></li>
+          <li class="pagination__item"><a href="#">Следующая</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="page-footer">
+  <section class="map">
+    <h2 class="visually-hidden">Адрес</h2>
+    <!-- iframe map -->
+    <div class="address">
+      <h3 class="address__title">nerds design studio</h3>
+      <p>191186, Санкт-Петербург,<br>
+        ул. Б. Конюшенная, д. 19/8</p>
+      <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+      <button class="address__btn btn" type="button">Напишите нам</button>
+    </div>
+  </section>
+  <div class="social">
+    <ul class="social__list">
+      <li class="social__list-item"><a href="#" target="_blank" rel="nofollow">Вконтакте</a></li>
+      <li class="social__list-item"><a href="#" target="_blank" rel="nofollow">Фейсбук</a></li>
+      <li class="social__list-item"><a href="#" target="_blank" rel="nofollow">Инстаграм</a></li>
+    </ul>
+  </div>
+  <div class="page-footer__content">
+    <p>Давайте дружить, это выгодно!</p>
+    <p>Скидка 10% для друзей из социальных сетей.</p>
+  </div>
+</footer>
+
+<div class="modal contact-us">
+  <h2 class="visually-hidden">Форма связи</h2>
+  <p>Напишите нам</p>
+  <form class="contact-us__form" action="" method="post" autocomplete="off">
+    <label for="name">Ваше имя:</label>
+    <input type="text" id="name" placeholder="Имя, Фамилия">
+    <label for="email">Ваш email:</label>
+    <input type="email" id="email" placeholder="email@example.com">
+    <label for="message">Текст письма:</label>
+    <textarea type="text" id="message" placeholder="В свободной форме"></textarea>
+    <button class="btn contact-us__btn" type="submit">Отправить</button>
+  </form>
+</div>
+</body>
+</html>
