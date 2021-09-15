@@ -44,3 +44,21 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.btn {
+  display: block;
+  padding: 16px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 3px;
+  background-color: #35d2af;
+}

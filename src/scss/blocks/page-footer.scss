@@ -1,0 +1,19 @@
+.page-footer {
+  .container {
+    display: flex;
+    justify-content: start;
+  }
+
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    margin-right: 100px;
+    padding: 20px;
+
+    list-style: none;
+  }
+}

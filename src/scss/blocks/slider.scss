@@ -1,0 +1,48 @@
+.slider {
+  min-height: 432px;
+  background-color: $bg-header;
+}
+
+.slider__item {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.slider__content {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+
+  width: 520px;
+
+  p:first-of-type {
+    color: #000000;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+  }
+
+  p {
+    color: #283136;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.slider__btn {
+  align-self: flex-start;
+  padding-left: 54px;
+  padding-right: 54px;
+
+  background-color: $link-hover;
+
+  &:hover {
+    background-color: $btn-hover-first;
+  }
+
+  &:active {
+    background-color: $btn-active-first;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

@@ -1,0 +1,15 @@
+.map {
+  position: relative;
+  background-color: $bg-header;
+}
+
+.map__img {
+  background-size: cover;
+  width: 100%;
+  min-height: 310px;
+}
+
+.address {
+  position: absolute;
+  top: 28px;
+}

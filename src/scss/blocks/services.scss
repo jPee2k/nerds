@@ -1,0 +1,19 @@
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.services__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 300px;
+  margin-right: 100px;
+}
+
+.services__item:last-of-type {
+  margin-right: 0;
+}
