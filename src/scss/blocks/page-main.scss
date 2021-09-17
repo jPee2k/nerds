@@ -1,4 +1,7 @@
 .flex-box {
   display: flex;
   justify-content: space-between;
+
+  padding-bottom: 48px;
+  border-bottom: 2px solid $bg-header;
 }

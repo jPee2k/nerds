@@ -3,10 +3,11 @@
 
   .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
 
-    height: 112px;
+    min-height: 112px;
   }
 }
 
@@ -19,11 +20,11 @@
   padding-top: 2px;
 
   &:hover {
-    opacity: 80%;
+    opacity: 0.8;
   }
 
   &:active {
-    opacity: 30%;
+    opacity: 0.3;
   }
 }
 
@@ -42,6 +43,7 @@
 
   li {
     flex-grow: 1;
+    flex-shrink: 1;
   }
 
   a {
@@ -49,6 +51,7 @@
 
     display: inline-block;
     padding-bottom: 13px;
+    margin-top: 23px;
     margin-right: 13px;
 
     text-decoration: none;
@@ -57,11 +60,11 @@
     cursor: pointer;
 
     &:hover {
-      color: $link-hover;
+      color: $text-menu-hover;
     }
 
     &:active {
-      opacity: 30%;
+      opacity: 0.3;
     }
 
     &.active::after {
@@ -72,7 +75,7 @@
       margin: 0 auto;
 
       content: "";
-      border-bottom: 2px solid $link-hover;
+      border-bottom: 2px solid $text-menu-hover;
     }
   }
 }
@@ -83,8 +86,8 @@
 }
 
 .user-nav {
-  a:last-of-type {
-    margin: 0;
+  li:last-of-type a {
+    margin-right: 0;
   }
 }
 

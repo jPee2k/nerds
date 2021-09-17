@@ -1,8 +1,4 @@
 *, *::before, *::after {
-  box-sizing: inherit;
-}
-
-html {
   box-sizing: border-box;
 }
 
@@ -47,7 +43,7 @@ body {
 
 .btn {
   display: block;
-  padding: 16px;
+  padding: 16px 54px;
 
   font-weight: 500;
   font-size: 16px;
@@ -60,5 +56,40 @@ body {
 
   border: none;
   border-radius: 3px;
-  background-color: #35d2af;
+
+  background-color: $btn-color-first;
+
+  &:hover {
+    background-color: $btn-hover-first;
+  }
+
+  &:active {
+    background-color: $btn-active-first;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
+
+.btn--green {
+  background-color: $btn-color-second;
+
+  &:hover {
+    background-color: $btn-hover-second;
+  }
+
+  &:active {
+    background-color: $btn-active-second;
+  }
+}
+
+.btn--yellow {
+  background-color: $btn-color-third;
+
+  &:hover {
+    background-color: $btn-hover-third;
+  }
+
+  &:active {
+    background-color: $btn-active-third;
+  }
+}
+

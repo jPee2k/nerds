@@ -6,11 +6,25 @@ $tablet-sm: 640px;
 $mobile: 480px;
 $mobile-sm: 320px;
 
-// main colors
-$main-text-color: #000000;
-$link-hover: #fb565a;
+// blocks color
 $bg-header: #eeeeee;
 
+// main colors
+$main-text-color: #000000;
+$text-color: #283136;
+$text-menu-hover: #fb565a;
+
 // first type of btn
+$btn-color-first: #fb565a;
 $btn-hover-first: #e74246;
 $btn-active-first: #d7373b;
+
+// second type of btn
+$btn-color-second: #00ca74;
+$btn-hover-second: #00bc6c;
+$btn-active-second: #00aa62;
+
+// third type of btn
+$btn-color-third: #efc84a;
+$btn-hover-third: #eab534;
+$btn-active-third: #e5a722;

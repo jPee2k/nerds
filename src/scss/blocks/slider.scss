@@ -1,48 +1,65 @@
 .slider {
-  min-height: 432px;
+  overflow: hidden;
+  margin-bottom: 80px;
   background-color: $bg-header;
-}
 
-.slider__item {
-  display: flex;
-  justify-content: flex-start;
-}
+  .slider__item {
+    height: 433px;
+    position: relative;
 
-.slider__content {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  align-items: center;
+    display: none;
 
-  width: 520px;
-
-  p:first-of-type {
-    color: #000000;
-    font-weight: 500;
-    font-size: 55px;
-    line-height: 55px;
+    &.shown {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 
-  p {
-    color: #283136;
-    font-size: 16px;
-    line-height: 24px;
+  .slider__content {
+    position: absolute;
+    left: 0;
+    top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 580px;
+
+    p:first-of-type {
+      margin-top: 60px;
+      margin-bottom: 11px;
+
+      color: #000000;
+      font-weight: 500;
+      font-size: 55px;
+      line-height: 55px;
+
+      max-width: 100%;
+    }
+
+    p {
+      color: #283136;
+      font-size: 16px;
+      line-height: 24px;
+
+      max-width: 430px;
+    }
   }
-}
 
-.slider__btn {
-  align-self: flex-start;
-  padding-left: 54px;
-  padding-right: 54px;
+  .slider__img {
+    align-self: flex-end;
 
-  background-color: $link-hover;
+    max-width: 698px;
 
-  &:hover {
-    background-color: $btn-hover-first;
+    margin-left: 31px;
+    margin-right: 31px;
   }
 
-  &:active {
-    background-color: $btn-active-first;
-    color: rgba(255, 255, 255, 0.3);
+  .btn {
+    align-self: flex-start;
+
+    margin-top: 22px;
+    margin-bottom: 22px;
   }
 }

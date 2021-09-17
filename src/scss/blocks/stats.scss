@@ -1,3 +1,45 @@
 .stats {
+  .logo-nerds {
+    margin-bottom: 18px;
+  }
 
+  .quote {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .stats__list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    max-width: 360px;
+  }
+
+  .stats__item {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    width: 100px;
+    margin-top: 21px;
+
+    dt {
+      font-size: 45px;
+      font-weight: bold;
+
+      margin-bottom: 16px;
+    }
+
+    dd {
+      margin: 0;
+    }
+
+    sup {
+      font-size: 28px;
+    }
+  }
 }

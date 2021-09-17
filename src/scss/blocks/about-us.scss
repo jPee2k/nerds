@@ -1,3 +1,58 @@
 .about-us {
   max-width: 660px;
+
+  p {
+    color: $text-color;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .about-us__title {
+    margin-top: 34px;
+    margin-bottom: 34px;
+
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .about-us__list-title {
+    margin-top: 40px;
+
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .about-us__list {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+    color: $text-color;
+    line-height: 24px;
+  }
+
+  .about-us__item {
+    position: relative;
+
+    margin: 24px auto;
+    padding-left: 36px;
+
+    &::before {
+      position: absolute;
+      left: 1px;
+      top: 10px;
+
+      content: "";
+      height: 2px;
+      width: 25px;
+      background-color: $text-menu-hover;
+    }
+  }
 }
+
+
+
+
+
+
