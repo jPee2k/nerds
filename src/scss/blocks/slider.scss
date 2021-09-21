@@ -4,7 +4,7 @@
   background-color: $bg-header;
 
   .slider__item {
-    height: 433px;
+    height: 423px;
     position: relative;
 
     display: none;
@@ -18,7 +18,7 @@
   .slider__content {
     position: absolute;
     left: 0;
-    top: 20px;
+    top: 10px;
 
     display: flex;
     flex-direction: column;
