@@ -67,6 +67,12 @@ body {
     background-color: $btn-active-first;
     color: rgba(255, 255, 255, 0.3);
   }
+
+  &[disabled] {
+    pointer-events: none;
+    background-image: inherit;
+    opacity: 0.5;
+  }
 }
 
 .btn--green {
