@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+//*:focus {
+//  outline: none;
+//  box-shadow: 0 0 0 2px black;
+//  border-radius: 2px;
+//}
+
 [hidden] {
   display: none !important;
 }
@@ -98,4 +104,5 @@ body {
     background-color: $btn-active-third;
   }
 }
+
 
