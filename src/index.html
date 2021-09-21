@@ -179,18 +179,25 @@
   </div>
 </footer>
 
-<div hidden class="modal contact-us">
+<div class="modal contact-us"><!-- shown -->
   <h2 class="visually-hidden">Форма связи</h2>
-  <p>Напишите нам</p>
+  <p class="contact-us__title">Напишите нам</p>
   <form class="contact-us__form" action="" method="post" autocomplete="off">
-    <label for="name">Ваше имя:</label>
-    <input type="text" id="name" placeholder="Имя, Фамилия">
-    <label for="email">Ваш email:</label>
-    <input type="email" id="email" placeholder="email@example.com">
-    <label for="message">Текст письма:</label>
-    <textarea type="text" id="message" placeholder="В свободной форме"></textarea>
-    <button class="btn contact-us__btn" type="submit">Отправить</button>
+    <div>
+      <label for="name">Ваше имя:</label>
+      <input type="text" id="name" placeholder="Имя Фамилия">
+    </div>
+    <div>
+      <label for="email">Ваш e-mail:</label>
+      <input type="email" id="email" placeholder="email@example.com">
+    </div>
+    <div>
+      <label for="message">Текст письма:</label>
+      <textarea type="text" id="message" cols="92" rows="5" placeholder="В свободной форме"></textarea>
+    </div>
+    <button class="btn contact-us__btn" type="submit" disabled>Отправить</button>
   </form>
+  <button class="modal__close-btn" type="button"></button>
 </div>
 </body>
 </html>
