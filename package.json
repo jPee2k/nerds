@@ -2,7 +2,7 @@
   "name": "@html-academy/code",
   "version": "2.0.0",
   "description": "frontend development",
-  "main": "src/index.js",
+  "main": "src/js/index.js",
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --bail",
     "test-windows": "node --experimental-vm-modules --no-warnings node_modules/jest/bin/jest --bail",
@@ -70,6 +70,7 @@
     "axios": "^0.21.1",
     "lodash": "^4.17.21",
     "on-change": "^3.0.2",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "yup": "^0.32.9"
   }
 }

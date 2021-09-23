@@ -15,7 +15,7 @@ const multipleHtmlPlugins = ['index', 'catalog']
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
   devtool: 'source-map',
-  entry: path.resolve(__dirname, 'src/index.js'),
+  entry: path.resolve(__dirname, 'src/js/index.js'),
   output: {
     filename: 'js/bundle.js',
     path: path.resolve(__dirname, 'dist/'),
@@ -24,6 +24,9 @@ module.exports = {
   devServer: {
     contentBase: '../dist',
     // watchContentBase: true,
+  },
+  stats: {
+    children: true,
   },
   module: {
     rules: [
