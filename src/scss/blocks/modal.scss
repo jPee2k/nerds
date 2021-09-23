@@ -2,9 +2,8 @@
   display: none;
 
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: calc(50% - 295px);
+  left: calc(50% - 480px);
 
   width: 960px;
   min-height: 590px;
@@ -54,11 +53,15 @@
   justify-content: space-between;
   align-items: center;
 
+  & > div {
+    position: relative;
+  }
+
   & > div:not(:last-of-type) {
     width: 360px;
   }
 
-  div:last-of-type {
+  & > div:last-of-type {
     width: 100%;
   }
 
@@ -70,6 +73,10 @@
     font-weight: 700;
 
     margin-bottom: 9px;
+
+    span {
+      color: #fb565a;
+    }
   }
 
   input,
@@ -96,8 +103,39 @@
     margin-bottom: 43px;
   }
 
+  .text-error {
+    position: absolute;
+    bottom: 12px;
+    left: 13px;
+
+    font-size: 14px;
+    color: #fb565a;
+  }
+
+  textarea ~ .text-error {
+    bottom: 26px;
+  }
+
+  .max-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .error {
+    border: 2px solid #fb565a;
+    border-radius: 3px;
+  }
+
   .contact-us__btn {
     min-width: 260px;
     margin-bottom: 65px;
   }
+}
+
+.drag {
+  animation-name: drag;
+  animation-duration: 150ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 2;
 }
