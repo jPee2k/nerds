@@ -1,6 +1,5 @@
 import '@popperjs/core';
-import 'regenerator-runtime/runtime.js';
 import '../scss/index.scss';
-import runApp from './app.js';
+import runApp from './contact-us-form/app.js';
 
 runApp();
