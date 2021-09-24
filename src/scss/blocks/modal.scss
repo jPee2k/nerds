@@ -128,14 +128,8 @@
   }
 
   .contact-us__btn {
+    position: relative;
     min-width: 260px;
     margin-bottom: 65px;
   }
-}
-
-.drag {
-  animation-name: drag;
-  animation-duration: 150ms;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 2;
 }
