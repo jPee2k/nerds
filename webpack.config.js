@@ -19,11 +19,11 @@ module.exports = {
   output: {
     filename: 'js/bundle.js',
     path: path.resolve(__dirname, 'dist/'),
-    // clean: true,
+    clean: true,
   },
   devServer: {
     contentBase: '../dist',
-    // watchContentBase: true,
+    watchContentBase: true,
   },
   stats: {
     children: true,

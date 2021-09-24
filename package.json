@@ -8,7 +8,8 @@
     "test-windows": "node --experimental-vm-modules --no-warnings node_modules/jest/bin/jest --bail",
     "dev": "webpack --node-env development",
     "prod": "webpack --node-env production",
-    "watch": "webpack --watch --node-env development"
+    "watch": "webpack --watch --node-env development",
+    "serve": "webpack serve --open"
   },
   "repository": {
     "type": "git",
