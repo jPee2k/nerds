@@ -30,13 +30,11 @@ export const renderErrors = (state, form, errors) => {
   });
 };
 
-export const playAnimation = (selector) => {
+export const playAnimation = (selector, animation) => {
   const el = document.querySelector(selector);
-  el.classList.add('drag');
-
-  setTimeout(() => {
-    el.classList.remove('drag');
-  }, 300);
+  el.classList.remove(animation);
+  el.style.width = el.offsetWidth;
+  el.classList.add(animation);
 };
 
 export const renderSymbsCounter = (state) => {
@@ -73,7 +71,7 @@ export const renderChanges = (state, form, value) => {
       submitBtn.classList.remove('spinner');
       submitBtn.removeAttribute('disabled');
       textareaCounter.setAttribute('hidden', 'true');
-      modal.classList.remove('shown');
+      modal.classList.remove('shown', 'drag');
       // TODO call success message
       break;
     default:

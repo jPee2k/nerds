@@ -105,13 +105,6 @@ body {
   color: $text-menu-hover;
 }
 
-.drag {
-  animation-name: drag;
-  animation-duration: 150ms;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 2;
-}
-
 .spinner {
   color: transparent;
 }
@@ -129,12 +122,39 @@ body {
   animation-iteration-count: infinite;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-150%);
+  }
+  40% {
+    transform: translateY(15%);
+  }
+  60% {
+    transform: translateY(-15%);
+  }
+  80% {
+    transform: translateY(10%);
+  }
+  90% {
+    transform: translateY(-7%);
+  }
+  93% {
+    transform: translateY(5%);
+  }
+  96% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 @keyframes drag {
   25% {
-    transform: translate(-10px);
+    transform: translateX(-10px);
   }
   75% {
-    transform: translate(10px);
+    transform: translateX(10px);
   }
 }
 

@@ -32,13 +32,13 @@ const modalHandler = () => {
 
   closeBtn.addEventListener('click', (evt) => {
     evt.preventDefault();
-    modal.classList.remove('shown');
+    modal.classList.remove('shown', 'drag');
   });
 
   window.addEventListener('keydown', (evt) => {
     if (evt.key === 'Escape' && modal.classList.contains('shown')) {
       evt.preventDefault();
-      modal.classList.remove('shown');
+      modal.classList.remove('shown', 'drag');
     }
   });
 };
@@ -101,7 +101,7 @@ const app = () => {
     switch (path) {
       case 'contactUsForm.errors':
         renderErrors(state, form, value);
-        playAnimation('.modal');
+        playAnimation('.modal', 'drag');
         break;
       case 'contactUsForm.textarea.count':
         renderSymbsCounter(state);
