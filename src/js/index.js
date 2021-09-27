@@ -1,5 +1,7 @@
 import '@popperjs/core';
 import '../scss/index.scss';
-import runApp from './contact-us-form/app.js';
+import runContactFormApp from './contact-us-form/app.js';
+import runSliderApp from './slider/app.js';
 
-runApp();
+runContactFormApp();
+runSliderApp();
