@@ -65,6 +65,7 @@ export const renderChanges = (state, form, value) => {
       submitBtn.classList.remove('spinner');
       submitBtn.removeAttribute('disabled');
       // TODO call error message
+      alert('error');
       break;
     case 'finished':
       form.reset();
@@ -73,6 +74,7 @@ export const renderChanges = (state, form, value) => {
       textareaCounter.setAttribute('hidden', 'true');
       modal.classList.remove('shown', 'drag');
       // TODO call success message
+      alert('success');
       break;
     default:
       throw new Error(`incorrect state -> ${value}`);
