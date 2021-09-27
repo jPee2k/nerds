@@ -31,7 +31,8 @@
     border-radius: 50%;
     background-color: $bg-header;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: #e74246;
     }
 
