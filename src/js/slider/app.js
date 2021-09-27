@@ -42,6 +42,12 @@ const app = () => {
       slide.classList.add('shown');
       evt.target.classList.add('active');
     });
+
+    navItem.addEventListener('keyup', (evt) => {
+      if (evt.key === 'Enter') {
+        evt.target.click();
+      }
+    });
   });
 };
 
