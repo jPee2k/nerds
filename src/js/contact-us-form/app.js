@@ -82,20 +82,12 @@ const formHandler = (state, form) => {
   form.addEventListener('submit', onSubmitHandler);
 };
 
-const app = () => {
+const app = (unwatchedState) => {
   const form = document.querySelector('.contact-us__form');
-  const unwatchedState = {
-    contactUsForm: {
-      processState: 'filling', // 'sending', 'error', 'finished'
-      fields: {}, // validated data
-      errors: {}, // arr of validation err
-      timeoutId: null,
-      textarea: {
-        count: 0,
-        maxCount: 1024,
-      },
-    },
-  };
+
+  if (!form) {
+    return;
+  }
 
   const state = onChange(unwatchedState, (path, value) => {
     switch (path) {
