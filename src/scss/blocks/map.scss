@@ -1,11 +1,22 @@
 .map {
+  width: 100%;
   position: relative;
   background-color: $bg-header;
+  overflow: hidden;
 
   .map__img {
-    background-size: cover;
+    display: block;
+    margin: 0 auto;
+    max-width: none;
+  }
+
+  .map__frame {
+    position: absolute;
+    left: 0;
+    top: 0;
+
     width: 100%;
-    min-height: 310px;
+    height: 416px;
   }
 
   .address {
