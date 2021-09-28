@@ -30,11 +30,11 @@
     transform: translateY(2px);
   }
 
-  &:hover {
+  &[href]:hover {
     opacity: 0.8;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
   }
 }
