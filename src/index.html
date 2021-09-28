@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Nerds - дизайн-студия</title>
 </head>
@@ -65,9 +65,9 @@
       </div>
     </div>
     <ul class="slider__nav">
-      <li class="slider__nav-item active" tabindex="0" aria-label="к слайду 1" data-id="slide-1"></li>
-      <li class="slider__nav-item" tabindex="0" aria-label="к слайду 2" data-id="slide-2"></li>
-      <li class="slider__nav-item" tabindex="0" aria-label="к слайду 3" data-id="slide-3"></li>
+      <li class="slider__nav-item active" tabindex="0" title="к слайду 1" data-id="slide-1"></li>
+      <li class="slider__nav-item" tabindex="0" title="к слайду 2" data-id="slide-2"></li>
+      <li class="slider__nav-item" tabindex="0" title="к слайду 3" data-id="slide-3"></li>
     </ul>
   </section>
 
@@ -192,7 +192,7 @@
 <div class="modal contact-us"><!-- shown -->
   <h2 class="visually-hidden">Форма связи</h2>
   <p class="contact-us__title">Напишите нам</p>
-  <form class="contact-us__form" action="" method="post" autocomplete="off" novalidate>
+  <form class="contact-us__form" method="POST" autocomplete="off" novalidate>
     <div>
       <label for="name">Ваше имя: <span>*</span></label>
       <input type="text" id="name" name="name" placeholder="Имя Фамилия">
@@ -203,7 +203,7 @@
     </div>
     <div>
       <label for="message">Текст письма: <span>*</span></label>
-      <textarea type="text" id="message" name="message" cols="92" rows="5" placeholder="В свободной форме"></textarea>
+      <textarea id="message" name="message" cols="92" rows="5" placeholder="В свободной форме"></textarea>
     </div>
     <button class="btn contact-us__btn" type="submit">Отправить</button>
   </form>
