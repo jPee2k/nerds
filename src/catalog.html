@@ -3,101 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Магазин готовых шаблонов</title>
 </head>
 <body>
 <header class="page-header">
-  <img class="header__logo" src="images/svg/nerds-logo.svg" height="65" width="160" alt="логотип компании Нёрдс">
-  <ul class="main-nav">
-    <li class="main-nav__item"><a href="index.html">Студия</a></li>
-    <li class="main-nav__item"><a href="#">Клиенты</a></li>
-    <li class="main-nav__item"><a class="active">Магазин</a></li>
-    <li class="main-nav__item"><a href="#">Контакты</a></li>
-  </ul>
-  <ul class="users-nav">
-    <li class="users-nav__item"><a href="#">Корзина</a></li>
-  </ul>
+  <div class="container">
+    <a class="header__logo" href="index.html">
+      <img src="images/svg/nerds-logo.svg" height="65" width="160" alt="логотип компании Нёрдс">
+    </a>
+    <nav>
+      <ul class="main-nav">
+        <li class="main-nav__item"><a href="index.html">Студия</a></li>
+        <li class="main-nav__item"><a href="#">Клиенты</a></li>
+        <li class="main-nav__item"><a class="active">Магазин</a></li>
+        <li class="main-nav__item"><a href="#">Контакты</a></li>
+      </ul>
+      <ul class="user-nav">
+        <li class="user-nav__item"><a class="user-nav__cart" href="#">Корзина</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main class="page-main">
   <h1 class="page-main__title">Магазин готовых шаблонов</h1>
 
-  <div class="container">
-    <aside class="filters">
-      <h2 class="visually-hidden">Фильтр продуктов</h2>
+  <div class="container grid-container">
+    <aside class="filter">
+      <h2 class="visually-hidden">Фильтр товаров</h2>
 
-      <form action="" method="GET" autocomplete="off">
-        <fieldset>
+      <form id="filter" method="GET" autocomplete="off">
+        <fieldset class="filter__range">
+          <legend>Стоимость:</legend>
+          <label for="range">
+            <input type="range" id="range" name="price" min="0" max="15000" step="1"><!-- min max step value -->
+          </label>
+          <label for="price-from">
+            От
+            <input type="number" id="price-from" name="price" value="0" min="0" max="15000">
+          </label>
+          <label for="price-to">
+            До
+            <input type="number" id="price-to" name="price" value="15000" min="0" max="15000">
+          </label>
+        </fieldset>
+        <fieldset class="filter__grid">
           <legend>Сетка:</legend>
-          <label>
-            <input type="radio" name="grid" value="adaptive" checked>
+          <label class="filter__radio-label">
+            <input class="filter__radio" type="radio" name="grid" value="adaptive" checked>
+            <span class="filter__icon"></span>
             Адаптивная
           </label>
-          <label>
-            <input type="radio" name="grid" value="fixed">
+          <label class="filter__radio-label">
+            <input class="filter__radio" type="radio" name="grid" value="fixed">
+            <span class="filter__icon"></span>
             Фиксированная
           </label>
-          <label>
-            <input type="radio" name="grid" value="flexible">
+          <label class="filter__radio-label">
+            <input class="filter__radio" type="radio" name="grid" value="flexible">
+            <span class="filter__icon"></span>
             Резиновая
           </label>
         </fieldset>
-        <fieldset>
+        <fieldset class="filter__addons">
           <legend>Особенности:</legend>
-          <label>
-            <input type="checkbox" name="peculiarities" value="slider" checked>
+          <label class="filter__checkbox-label">
+            <input class="filter__checkbox" type="checkbox" name="addons" value="slider" checked>
+            <span class="filter__icon"></span>
             Слайдер
           </label>
-          <label>
-            <input type="checkbox" name="peculiarities" value="services">
+          <label class="filter__checkbox-label">
+            <input class="filter__checkbox" type="checkbox" name="addons" value="services">
+            <span class="filter__icon"></span>
             Блок преимуществ
           </label>
-          <label>
-            <input type="checkbox" name="peculiarities" value="news" checked>
+          <label class="filter__checkbox-label">
+            <input class="filter__checkbox" type="checkbox" name="addons" value="news" checked>
+            <span class="filter__icon"></span>
             Новости
           </label>
-          <label>
-            <input type="checkbox" name="peculiarities" value="gallery">
+          <label class="filter__checkbox-label">
+            <input class="filter__checkbox" type="checkbox" name="addons" value="gallery">
+            <span class="filter__icon"></span>
             Галерея
           </label>
-          <label>
-            <input type="checkbox" name="peculiarities" value="cart">
+          <label class="filter__checkbox-label">
+            <input class="filter__checkbox" type="checkbox" name="addons" value="cart">
+            <span class="filter__icon"></span>
             Корзина
           </label>
-
         </fieldset>
-        <fieldset class="order-by">
-          <legend>Сортировать:</legend>
-          <div class="order-by__values">
-            <label>
-              <input hidden type="radio" name="order" value="price" checked>
-              По цене
-            </label>
-            <label>
-              <input hidden type="radio" name="order" value="type">
-              По типу
-            </label>
-            <label>
-              <input hidden type="radio" name="order" value="name">
-              По названию
-            </label>
-          </div>
-          <div class="order-by__direction">
-            <label>
-              <input hidden type="radio" name="direction" value="ask">
-              icon down
-            </label>
-            <label>
-              <input hidden type="radio" name="direction" value="desc">
-              icon up
-            </label>
-          </div>
-        </fieldset>
-        <button class="btn filters__btn" type="button">Показать</button>
+        <button class="btn filter__btn" type="button">Показать</button>
       </form>
     </aside>
+    <section class="order">
+      <h2 class="visually-hidden">Сортировка товаров</h2>
+
+      <fieldset form="filter">
+        <legend>Сортировать:</legend>
+        <div class="order__values">
+          <label>
+            <input hidden form="filter" type="radio" name="order" value="price" checked>
+            По цене
+          </label>
+          <label>
+            <input hidden form="filter" type="radio" name="order" value="type">
+            По типу
+          </label>
+          <label>
+            <input hidden form="filter" type="radio" name="order" value="name">
+            По названию
+          </label>
+        </div>
+        <div class="order__direction">
+          <label>
+            <input hidden form="filter" type="radio" name="direction" value="ask">
+            icon down
+          </label>
+          <label>
+            <input hidden form="filter" type="radio" name="direction" value="desc">
+            icon up
+          </label>
+        </div>
+      </fieldset>
+    </section>
 
     <div class="content">
       <h2 class="visually-hidden">Каталог работ</h2>
@@ -120,7 +151,8 @@
           </footer>
         </li>
         <li class="content__item">
-          <img src="images/works/img-barbershop.jpg" height="576" width="360" alt="Скриншот страницы сайта Барбершоп Бородински">
+          <img src="images/works/img-barbershop.jpg" height="576" width="360"
+               alt="Скриншот страницы сайта Барбершоп Бородински">
           <footer hidden>
             <h3 class="content__title">Borodinski Barbershop</h3>
             <p class="content__description">Lorem ipsum dolor sit amet, consectetur.</p>
@@ -155,11 +187,15 @@
 
       <div class="pagination">
         <ul class="pagination__list">
-          <li class="pagination__item"><a hidden href="#">Предыдущая</a></li>
-          <li class="pagination__item"><a class="active">1</a></li>
-          <li class="pagination__item"><a href="#">2</a></li>
-          <li class="pagination__item"><a href="#">3</a></li>
-          <li class="pagination__item"><a href="#">Следующая</a></li>
+          <li><a class="pagination__link pagination__link--prev" href="?page=4">Предыдущая</a></li>
+          <li><a class="pagination__link" href="?page=1">1</a></li>
+          <li><a class="pagination__link pagination__link--rest">...</a></li>
+          <li><a class="pagination__link" href="?page=4">4</a></li>
+          <li><a class="pagination__link pagination__link--active">5</a></li>
+          <li><a class="pagination__link" href="?page=6">6</a></li>
+          <li><a class="pagination__link pagination__link--rest">...</a></li>
+          <li><a class="pagination__link" href="?page=20">20</a></li>
+          <li><a class="pagination__link pagination__link--next" href="?page=6">Следующая</a></li>
         </ul>
       </div>
     </div>
@@ -170,43 +206,55 @@
   <section class="map">
     <h2 class="visually-hidden">Адрес</h2>
 
-    <div class="map__container">
-      <img class="map__img" src="images/map.png" height="416" width="1440" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-      <!-- iframe map -->
-    </div>
-    <div class="address">
-      <h3 class="address__title">nerds design studio</h3>
-      <p>191186, Санкт-Петербург,<br>
-        ул. Б. Конюшенная, д. 19/8</p>
-      <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-      <button class="address__btn btn" type="button">Напишите нам</button>
+    <img class="map__img" src="images/map-plus-marker.png" height="416" width="1440"
+         alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+    <iframe class="map__frame" width="1440" height="416" style="border:0;" allowfullscreen="" loading="lazy"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1632729667580!5m2!1sru!2sua"></iframe>
+
+    <div class="container">
+      <div class="address">
+        <h3 class="address__title">nerds design studio</h3>
+        <p>191186, Санкт-Петербург,<br>
+          ул. Б. Конюшенная, д. 19/8</p>
+        <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+        <button class="btn" type="button">Напишите нам</button>
+      </div>
     </div>
   </section>
-  <div class="social">
-    <ul class="social__list">
-      <li class="social__list-item"><a href="#" target="_blank" rel="nofollow">Вконтакте</a></li>
-      <li class="social__list-item"><a href="#" target="_blank" rel="nofollow">Фейсбук</a></li>
-      <li class="social__list-item"><a href="#" target="_blank" rel="nofollow">Инстаграм</a></li>
+  <div class="index-column container">
+    <ul class="social">
+      <li><a class="social__item vk" href="https://vk.com" target="_blank" rel="nofollow" title="Вконтакте"></a></li>
+      <li><a class="social__item fb" href="https://facebook.com" target="_blank" rel="nofollow" title="Фейсбук"></a>
+      </li>
+      <li><a class="social__item in" href="https://instagram.com" target="_blank" rel="nofollow" title="Инстаграм"></a>
+      </li>
     </ul>
-  </div>
-  <div class="page-footer__content">
-    <p>Давайте дружить, это выгодно!</p>
-    <p>Скидка 10% для друзей из социальных сетей.</p>
+    <div class="page-footer__content">
+      <p>Давайте дружить, это выгодно!</p>
+      <p>Скидка 10% для друзей из социальных сетей.</p>
+    </div>
   </div>
 </footer>
 
-<div class="modal contact-us">
+<div class="modal contact-us"><!-- shown -->
   <h2 class="visually-hidden">Форма связи</h2>
-  <p>Напишите нам</p>
-  <form class="contact-us__form" action="" method="post" autocomplete="off">
-    <label for="name">Ваше имя:</label>
-    <input type="text" id="name" placeholder="Имя, Фамилия">
-    <label for="email">Ваш email:</label>
-    <input type="email" id="email" placeholder="email@example.com">
-    <label for="message">Текст письма:</label>
-    <textarea type="text" id="message" placeholder="В свободной форме"></textarea>
+  <p class="contact-us__title">Напишите нам</p>
+  <form class="contact-us__form" method="POST" autocomplete="off" novalidate>
+    <div>
+      <label for="name">Ваше имя: <span>*</span></label>
+      <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+    </div>
+    <div>
+      <label for="email">Ваш e-mail: <span>*</span></label>
+      <input type="email" id="email" name="email" placeholder="email@example.com">
+    </div>
+    <div>
+      <label for="message">Текст письма: <span>*</span></label>
+      <textarea id="message" name="message" cols="92" rows="5" placeholder="В свободной форме"></textarea>
+    </div>
     <button class="btn contact-us__btn" type="submit">Отправить</button>
   </form>
+  <button class="modal__close-btn" type="button"></button>
 </div>
 </body>
 </html>
