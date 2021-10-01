@@ -1,0 +1,78 @@
+.order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* --- title --- */
+
+  .filter__legend {
+    margin: 0;
+    margin-left: 12px;
+  }
+
+  /* --- label --- */
+
+  .input__label {
+    padding: 11px;
+
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    color: #000000;
+    opacity: 0.3;
+  }
+
+  .input__label[for="ask"],
+  .input__label[for="desc"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .input__label[for="ask"]::before {
+    content: url("../images/svg/icon-up-dir.svg");
+  }
+
+  .input__label[for="desc"]::before {
+    content: url("../images/svg/icon-down-dir.svg");
+  }
+
+  /* --- input states --- */
+
+  .input__label:hover,
+  .input__radio:focus ~ .input__label {
+    opacity: 0.6;
+  }
+
+  .input__radio:focus-visible ~ .input__label {
+    box-shadow: 0 0 0 2px black;
+    border-radius: 2px;
+  }
+
+  .input__radio:checked ~ .input__label,
+  .input__label:active {
+    opacity: 1;
+  }
+}
+
+/* --- fieldset --- */
+
+.filter__group--order {
+  flex-direction: row;
+  margin: 0;
+}
+
+/* --- wrapper --- */
+
+.filter__group--order .input__wrapper {
+  display: inline-block;
+}
+
+/* --- groups --- */
+
+.order__direction {
+  display: flex;
+  justify-content: space-between;
+  width: 40px;
+  margin-left: 38px;
+}

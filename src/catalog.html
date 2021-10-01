@@ -31,159 +31,211 @@
   <h1 class="page-main__title">Магазин готовых шаблонов</h1>
 
   <div class="container grid-container">
-    <aside class="filter">
+    <aside class="filter" tabindex="0">
       <h2 class="visually-hidden">Фильтр товаров</h2>
 
-      <form id="filter" method="GET" autocomplete="off">
-        <fieldset class="filter__range">
-          <legend>Стоимость:</legend>
-          <label for="range">
-            <input type="range" id="range" name="price" min="0" max="15000" step="1"><!-- min max step value -->
-          </label>
-          <label for="price-from">
-            От
-            <input type="number" id="price-from" name="price" value="0" min="0" max="15000">
-          </label>
-          <label for="price-to">
-            До
-            <input type="number" id="price-to" name="price" value="15000" min="0" max="15000">
-          </label>
+      <form class="filter__form" id="form-filter" method="GET" autocomplete="off">
+        <fieldset class="filter__group filter__group--range">
+          <legend class="filter__legend filter__legend--range">Стоимость:</legend>
+          <div class="input__wrapper input__wrapper--range">
+            <label class="input__label" for="range"></label>
+            <input class="input input__range" type="range" id="range" name="price" min="0" max="15000" step="1">
+            <!-- min max step value -->
+          </div>
+          <div class="input__wrapper input__wrapper--range-from">
+            <label class="input__label" for="price-from">От</label>
+            <input class="input input__range-from" type="number" id="price-from" name="price" value="0" min="0"
+                   max="15000">
+          </div>
+          <div class="input__wrapper input__wrapper--range-to">
+            <label class="input__label" for="price-to">До</label>
+            <input class="input input__range-to" type="number" id="price-to" name="price" value="15000" min="0"
+                   max="15000">
+          </div>
         </fieldset>
-        <fieldset class="filter__grid">
-          <legend>Сетка:</legend>
-          <label class="filter__radio-label">
-            <input class="filter__radio" type="radio" name="grid" value="adaptive" checked>
-            <span class="filter__icon"></span>
-            Адаптивная
-          </label>
-          <label class="filter__radio-label">
-            <input class="filter__radio" type="radio" name="grid" value="fixed">
-            <span class="filter__icon"></span>
-            Фиксированная
-          </label>
-          <label class="filter__radio-label">
-            <input class="filter__radio" type="radio" name="grid" value="flexible">
-            <span class="filter__icon"></span>
-            Резиновая
-          </label>
+
+        <fieldset class="filter__group filter__group--grid">
+          <legend class="filter__legend">Сетка:</legend>
+          <div class="input__wrapper">
+            <input class="input input__radio" type="radio" id="grid-adaptive" name="grid" value="adaptive" checked>
+            <label class="input__label input__label--radio" for="grid-adaptive">
+              Адаптивная
+              <span class="input__icon"></span>
+            </label>
+          </div>
+          <div class="input__wrapper">
+            <input class="input input__radio" type="radio" id="grid-fixed" name="grid" value="fixed">
+            <label class="input__label input__label--radio" for="grid-fixed">
+              Фиксированная
+              <span class="input__icon"></span>
+            </label>
+
+          </div>
+          <div class="input__wrapper">
+            <input class="input input__radio" type="radio" id="grid-flexible" name="grid" value="flexible" disabled>
+            <label class="input__label input__label--radio" for="grid-flexible">
+              Резиновая
+              <span class="input__icon"></span>
+            </label>
+          </div>
         </fieldset>
-        <fieldset class="filter__addons">
-          <legend>Особенности:</legend>
-          <label class="filter__checkbox-label">
-            <input class="filter__checkbox" type="checkbox" name="addons" value="slider" checked>
-            <span class="filter__icon"></span>
-            Слайдер
-          </label>
-          <label class="filter__checkbox-label">
-            <input class="filter__checkbox" type="checkbox" name="addons" value="services">
-            <span class="filter__icon"></span>
-            Блок преимуществ
-          </label>
-          <label class="filter__checkbox-label">
-            <input class="filter__checkbox" type="checkbox" name="addons" value="news" checked>
-            <span class="filter__icon"></span>
-            Новости
-          </label>
-          <label class="filter__checkbox-label">
-            <input class="filter__checkbox" type="checkbox" name="addons" value="gallery">
-            <span class="filter__icon"></span>
-            Галерея
-          </label>
-          <label class="filter__checkbox-label">
-            <input class="filter__checkbox" type="checkbox" name="addons" value="cart">
-            <span class="filter__icon"></span>
-            Корзина
-          </label>
+
+        <fieldset class="filter__group filter__group--addons">
+          <legend class="filter__legend">Особенности:</legend>
+          <div class="input__wrapper">
+            <input class="input input__checkbox" type="checkbox" id="add-slider" name="addons" value="slider" checked>
+            <label class="input__label input__label--checkbox" for="add-slider">
+              Слайдер
+              <span class="input__icon"></span>
+            </label>
+
+          </div>
+          <div class="input__wrapper">
+            <input class="input input__checkbox" type="checkbox" id="add-advantages" name="addons" value="advantages">
+            <label class="input__label input__label--checkbox" for="add-advantages">
+              Блок преимуществ
+              <span class="input__icon"></span>
+            </label>
+          </div>
+          <div class="input__wrapper">
+            <input class="input input__checkbox" type="checkbox" id="add-news" name="addons" value="news" checked>
+            <label class="input__label input__label--checkbox" for="add-news">
+              Новости
+              <span class="input__icon"></span>
+            </label>
+          </div>
+          <div class="input__wrapper">
+            <input class="input input__checkbox" type="checkbox" id="add-gallery" name="addons" value="gallery" checked
+                   disabled>
+            <label class="input__label input__label--checkbox" for="add-gallery">
+              Галерея
+              <span class="input__icon"></span>
+            </label>
+          </div>
+          <div class="input__wrapper">
+            <input class="input input__checkbox" type="checkbox" id="add-cart" name="addons" value="cart" disabled>
+            <label class="input__label input__label--checkbox" for="add-cart">
+              Корзина
+              <span class="input__icon"></span>
+            </label>
+          </div>
         </fieldset>
+
         <button class="btn filter__btn" type="button">Показать</button>
       </form>
     </aside>
-    <section class="order">
-      <h2 class="visually-hidden">Сортировка товаров</h2>
 
-      <fieldset form="filter">
-        <legend>Сортировать:</legend>
+    <section class="order" tabindex="0">
+      <h2 class="filter__legend">Сортировать:</h2>
+
+      <fieldset class="filter__group filter__group--order" form="form-filter">
         <div class="order__values">
-          <label>
-            <input hidden form="filter" type="radio" name="order" value="price" checked>
-            По цене
-          </label>
-          <label>
-            <input hidden form="filter" type="radio" name="order" value="type">
-            По типу
-          </label>
-          <label>
-            <input hidden form="filter" type="radio" name="order" value="name">
-            По названию
-          </label>
+          <div class="input__wrapper">
+            <input class="input input__radio" type="radio" form="form-filter" id="by-price" name="order" value="price"
+                   checked>
+            <label class="input__label input__label--radio" for="by-price">По цене</label>
+          </div>
+          <div class="input__wrapper">
+            <input class="input input__radio" type="radio" form="form-filter" id="by-type" name="order" value="type">
+            <label class="input__label input__label--radio" for="by-type">По типу</label>
+          </div>
+          <div class="input__wrapper">
+            <input class="input input__radio" type="radio" form="form-filter" id="by-name" name="order" value="name">
+            <label class="input__label input__label--radio" for="by-name">По названию</label>
+          </div>
         </div>
         <div class="order__direction">
-          <label>
-            <input hidden form="filter" type="radio" name="direction" value="ask">
-            icon down
-          </label>
-          <label>
-            <input hidden form="filter" type="radio" name="direction" value="desc">
-            icon up
-          </label>
+          <div class="input__wrapper">
+            <input class="input input__radio" type="radio" form="form-filter" id="desc" name="direction" value="desc">
+            <label class="input__label input__label--radio" for="desc" aria-label="По убыванию"></label>
+          </div>
+          <div class="input__wrapper">
+            <input class="input input__radio" type="radio" form="form-filter" id="ask" name="direction" value="ask"
+                   checked>
+            <label class="input__label input__label--radio" for="ask" aria-label="По возрастанию"></label>
+          </div>
         </div>
       </fieldset>
     </section>
 
-    <div class="content">
+    <section class="content">
       <h2 class="visually-hidden">Каталог работ</h2>
 
-      <ul class="content__list">
-        <li class="content__item">
+      <div class="content__list">
+        <article class="content__item card" tabindex="0">
+          <svg class="browser-icon" width="360" height="40" viewBox="0 0 360 40">
+            <path fill="#4D4D4D"
+                  d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+          </svg>
           <img src="images/works/img-sedona.jpg" height="576" width="360" alt="Скриншот страницы сайта Седона">
-          <footer hidden>
-            <h3 class="content__title">Sedona</h3>
-            <p class="content__description">Информационный сайт для туристов</p>
-            <button class="content__btn btn" type="button">9 9900 руб.</button>
+          <footer class="card__footer">
+            <h3 class="card__title">Sedona</h3>
+            <p class="card__description">Информационный сайт<br> для туристов</p>
+            <button class="card__btn btn" type="button">9 9900 руб.</button>
           </footer>
-        </li>
-        <li class="content__item">
+        </article>
+        <article class="content__item card" tabindex="0">
+          <svg class="browser-icon" width="360" height="40" viewBox="0 0 360 40">
+            <path fill="#4D4D4D"
+                  d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+          </svg>
           <img src="images/works/img-pink.jpg" height="576" width="360" alt="Скриншот страницы сайта Пинк">
-          <footer hidden>
-            <h3 class="content__title">Pink</h3>
-            <p class="content__description">Lorem ipsum dolor sit amet.</p>
-            <button class="content__btn btn" type="button">9 9900 руб.</button>
+          <footer class="card__footer">
+            <h3 class="card__title">Pink</h3>
+            <p class="card__description">Lorem ipsum dolor sit amet.</p>
+            <button class="card__btn btn" type="button">9 9900 руб.</button>
           </footer>
-        </li>
-        <li class="content__item">
+        </article>
+        <article class="content__item card" tabindex="0">
+          <svg class="browser-icon" width="360" height="40" viewBox="0 0 360 40">
+            <path fill="#4D4D4D"
+                  d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+          </svg>
           <img src="images/works/img-barbershop.jpg" height="576" width="360"
                alt="Скриншот страницы сайта Барбершоп Бородински">
-          <footer hidden>
-            <h3 class="content__title">Borodinski Barbershop</h3>
-            <p class="content__description">Lorem ipsum dolor sit amet, consectetur.</p>
-            <button class="content__btn btn" type="button">9 9900 руб.</button>
+          <footer class="card__footer">
+            <h3 class="card__title">Borodinski Barbershop</h3>
+            <p class="card__description">Lorem ipsum dolor sit amet, consectetur.</p>
+            <button class="card__btn btn" type="button">9 9900 руб.</button>
           </footer>
-        </li>
-        <li class="content__item">
+        </article>
+        <article class="content__item card" tabindex="0">
+          <svg class="browser-icon" width="360" height="40" viewBox="0 0 360 40">
+            <path fill="#4D4D4D"
+                  d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+          </svg>
           <img src="images/works/img-mishka.jpg" height="576" width="360" alt="Скриншот страницы сайта Мишка">
-          <footer hidden>
-            <h3 class="content__title">Mishka</h3>
-            <p class="content__description">Lorem ipsum dolor sit amet.</p>
-            <button class="content__btn btn" type="button">9 9900 руб.</button>
+          <footer class="card__footer">
+            <h3 class="card__title">Mishka</h3>
+            <p class="card__description">Lorem ipsum dolor sit amet.</p>
+            <button class="card__btn btn" type="button">9 9900 руб.</button>
           </footer>
-        </li>
-        <li class="content__item">
+        </article>
+        <article class="content__item card" tabindex="0">
+          <svg class="browser-icon" width="360" height="40" viewBox="0 0 360 40">
+            <path fill="#4D4D4D"
+                  d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+          </svg>
           <img src="images/works/img-aplus.jpg" height="576" width="360" alt="Скриншот страницы сайта А плюс">
-          <footer hidden>
-            <h3 class="content__title">A plus</h3>
-            <p class="content__description">Lorem ipsum dolor sit amet.</p>
-            <button class="content__btn btn" type="button">9 9900 руб.</button>
+          <footer class="card__footer">
+            <h3 class="card__title">A plus</h3>
+            <p class="card__description">Lorem ipsum dolor sit amet.</p>
+            <button class="card__btn btn" type="button">9 9900 руб.</button>
           </footer>
-        </li>
-        <li class="content__item">
+        </article>
+        <article class="content__item card" tabindex="0">
+          <svg class="browser-icon" width="360" height="40" viewBox="0 0 360 40">
+            <path fill="#4D4D4D"
+                  d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+          </svg>
           <img src="images/works/img-kvast.jpg" height="576" width="360" alt="Скриншот страницы сайта Кваст">
-          <footer hidden>
-            <h3 class="content__title">Kvast</h3>
-            <p class="content__description">Lorem ipsum dolor sit amet, consectetur.</p>
-            <button class="content__btn btn" type="button">9 9900 руб.</button>
+          <footer class="card__footer">
+            <h3 class="card__title">Kvast</h3>
+            <p class="card__description">Lorem ipsum dolor sit amet, consectetur.</p>
+            <button class="card__btn btn" type="button">9 9900 руб.</button>
           </footer>
-        </li>
-      </ul>
+        </article>
+      </div>
 
       <div class="pagination">
         <ul class="pagination__list">
@@ -198,7 +250,7 @@
           <li><a class="pagination__link pagination__link--next" href="?page=6">Следующая</a></li>
         </ul>
       </div>
-    </div>
+    </section>
   </div>
 </main>
 

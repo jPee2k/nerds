@@ -5,3 +5,44 @@
   padding-bottom: 48px;
   border-bottom: 2px solid $bg-header;
 }
+
+/* --- Catalogs --- */
+
+.page-main__title {
+  min-height: 234px;
+
+  margin: 0;
+  padding: 0;
+  padding-top: 70px;
+  text-align: center;
+
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: #000000;
+
+  background-color: $bg-header;
+}
+
+.page-main .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 132px 1fr;
+  grid-template-areas:
+    'filter order order'
+    'filter content content';
+}
+
+.grid-container .filter {
+  grid-area: filter;
+  width: 260px;
+}
+
+.grid-container .order {
+  grid-area: order;
+}
+
+.grid-container .content {
+  grid-area: content;
+  margin-left: 14px;
+}
