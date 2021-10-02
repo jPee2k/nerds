@@ -1,13 +1,21 @@
 const state = {
   contactUsForm: {
     processState: 'filling', // 'sending', 'error', 'finished'
-      fields: {}, // validated data
+    fields: {}, // validated data
     errors: {}, // arr of validation err
     timeoutId: null,
-      textarea: {
+    textarea: {
       count: 0,
-        maxCount: 1024,
+      maxCount: 1024,
     },
+  },
+  catalogFilter: {
+    min: 0,
+    max: 21500,
+    step: 50,
+
+    currMinValue: 0,
+    currMaxValue: 15000,
   },
 };
 

@@ -37,19 +37,15 @@
       <form class="filter__form" id="form-filter" method="GET" autocomplete="off">
         <fieldset class="filter__group filter__group--range">
           <legend class="filter__legend filter__legend--range">Стоимость:</legend>
-          <div class="input__wrapper input__wrapper--range">
-            <label class="input__label" for="range"></label>
-            <input class="input input__range" type="range" id="range" name="price" min="0" max="15000" step="1">
-            <!-- min max step value -->
-          </div>
+          <!-- insert range -->
           <div class="input__wrapper input__wrapper--range-from">
             <label class="input__label" for="price-from">От</label>
-            <input class="input input__range-from" type="number" id="price-from" name="price" value="0" min="0"
+            <input class="input input__range-from" type="number" id="price-from" name="price-from" value="0" min="0"
                    max="15000">
           </div>
           <div class="input__wrapper input__wrapper--range-to">
             <label class="input__label" for="price-to">До</label>
-            <input class="input input__range-to" type="number" id="price-to" name="price" value="15000" min="0"
+            <input class="input input__range-to" type="number" id="price-to" name="price-to" value="15000" min="0"
                    max="15000">
           </div>
         </fieldset>
