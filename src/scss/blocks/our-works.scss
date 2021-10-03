@@ -32,7 +32,8 @@
       opacity: 0.2;
     }
 
-    a:hover {
+    a:hover,
+    a:focus-visible {
       opacity: 1;
     }
 

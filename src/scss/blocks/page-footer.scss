@@ -32,7 +32,7 @@
     background-color: $bg-header;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       background-color: #e74246;
     }
 

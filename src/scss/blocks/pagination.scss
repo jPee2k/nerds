@@ -55,7 +55,7 @@
 }
 
 .pagination__link:hover:not(.pagination__link--active):not(.pagination__link--rest),
-.pagination__link:focus {
+.pagination__link:focus-visible {
   background-color: #dfdfdf;
 }
 

@@ -62,7 +62,7 @@
 }
 
 .card:hover .browser-icon,
-.card:focus .browser-icon {
+.card:focus-visible .browser-icon {
   opacity: 1;
 }
 

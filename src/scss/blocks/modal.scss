@@ -40,7 +40,8 @@
     opacity: 0.3;
     background: url('../images/svg/close-cross.svg') no-repeat;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       opacity: 1;
     }
 

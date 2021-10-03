@@ -39,14 +39,20 @@
 
   /* --- input states --- */
 
-  .input__label:hover,
-  .input__radio:focus ~ .input__label {
+  .input__label:hover {
     opacity: 0.6;
   }
 
   .input__radio:focus-visible ~ .input__label {
-    box-shadow: 0 0 0 2px black;
-    border-radius: 2px;
+    color: $text-menu-hover;
+  }
+
+  .input__radio:focus-visible ~ .input__label[for="ask"]::before {
+    content: url("../images/svg/icon-up-dir_tomato.svg");
+  }
+
+  .input__radio:focus-visible ~ .input__label[for="desc"]::before {
+    content: url("../images/svg/icon-down-dir_tomato.svg");
   }
 
   .input__radio:checked ~ .input__label,

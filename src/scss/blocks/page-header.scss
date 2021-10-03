@@ -30,7 +30,8 @@
     transform: translateY(2px);
   }
 
-  &[href]:hover {
+  &[href]:hover,
+  &[href]:focus-visible {
     opacity: 0.8;
   }
 
@@ -63,7 +64,8 @@
 
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       color: $text-menu-hover;
     }
 

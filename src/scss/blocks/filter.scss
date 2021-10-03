@@ -92,7 +92,7 @@
 }
 
 .input__label:hover .input__icon,
-.input__label:focus .input__icon {
+.input__label:focus-visible .input__icon {
   opacity: 1;
 }
 
@@ -206,7 +206,7 @@
   background-color: $bg-header;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background-color: #dfdfdf;
   }
 

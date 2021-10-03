@@ -61,7 +61,8 @@ body {
 
   background-color: $btn-color-first;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: $btn-hover-first;
   }
 
@@ -70,7 +71,7 @@ body {
     color: rgba(255, 255, 255, 0.3);
   }
 
-  &[disabled] {
+  &:disabled {
     pointer-events: none;
     background-image: inherit;
     opacity: 0.5;
@@ -80,7 +81,8 @@ body {
 .btn--green {
   background-color: $btn-color-second;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: $btn-hover-second;
   }
 
@@ -92,7 +94,8 @@ body {
 .btn--yellow {
   background-color: $btn-color-third;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: $btn-hover-third;
   }
 
