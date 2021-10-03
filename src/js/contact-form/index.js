@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import * as yup from 'yup';
 import onChange from 'on-change';
+import unwatchedState from '../state.js';
 import textareaCounter from './textarea-counter.js';
 import sendData from './fetch.js';
 import { saveUserData, getUserData } from './storage.js';
@@ -82,7 +83,7 @@ const formHandler = (state, form) => {
   form.addEventListener('submit', onSubmitHandler);
 };
 
-const app = (unwatchedState) => {
+const app = () => {
   const form = document.querySelector('.contact-us__form');
 
   if (!form) {

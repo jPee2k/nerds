@@ -1,14 +1,14 @@
 import '@popperjs/core';
 import '../scss/index.scss';
-import state from './state';
-import runContactFormApp from './contact-us-form/app.js';
-import runSliderApp from './slider/app.js';
-import runFilterApp from './filter/app.js';
-import runHelpers from './card/app.js';
+
+import runContactFormApp from './contact-form/index.js';
+import runSliderApp from './slider/index.js';
+import runFilterApp from './filter/index.js';
+import runCardApp from './card/index.js';
 
 window.onload = () => {
-  runContactFormApp(state);
+  runContactFormApp();
   runSliderApp();
-  runFilterApp(state);
-  runHelpers();
+  runFilterApp();
+  runCardApp();
 };

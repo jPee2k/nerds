@@ -1,11 +1,11 @@
 const showCardData = () => {
-  const cardBtns = [...document.querySelectorAll('.card .card__btn')];
+  const cardButtons = [...document.querySelectorAll('.card .card__btn')];
 
-  if (cardBtns.length === 0) {
+  if (cardButtons.length === 0) {
     return;
   }
 
-  cardBtns.forEach((btn) => {
+  cardButtons.forEach((btn) => {
     btn.addEventListener('focus', (evt) => {
       const cardFooter = evt.target.parentElement;
       cardFooter.classList.add('shown');

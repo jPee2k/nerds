@@ -76,10 +76,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/bundle.css',
     }),
-    new HtmlWebpackPlugin({
-      filename: path.resolve(__dirname, 'dist/catalog.html'),
-      template: 'src/catalog.html',
-    }),
     // new FaviconsWebpackPlugin({
     //   logo: path.resolve(__dirname, 'src/images/icons/favicon-512.png'),
     //   prefix: '',

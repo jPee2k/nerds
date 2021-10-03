@@ -1,4 +1,5 @@
 import onChange from 'on-change';
+import unwatchedState from '../state.js';
 
 const renderRange = (state, filter) => {
   const legend = document.querySelector('#form-filter .filter__legend--range');
@@ -128,7 +129,7 @@ const renderChanges = (state, elements) => onChange(state, (path, value) => {
   }
 });
 
-const app = (unwatchedState) => {
+const app = () => {
   const filter = document.querySelector('#form-filter');
   if (!filter) {
     return;
