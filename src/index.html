@@ -5,24 +5,34 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>Nerds - дизайн-студия</title>
+
+  <meta property="og:title" content="Nerds - дизайн-студия">
+  <meta property="og:description" content="Мы — маленькая, но гордая дизайн-студия из Краснодара">
+  <meta property="og:image" content="./images/stats/nerds-illustration.jpg">
 </head>
 <body>
 <header class="page-header">
   <div class="container">
     <a class="header__logo">
-      <img src="images/svg/nerds-logo.svg" height="65" width="160" alt="логотип компании Нёрдс">
+      <img class="header__image" src="images/svg/nerds-logo.svg" height="65" width="160" alt="логотип компании Нёрдс">
     </a>
-    <nav>
-      <ul class="main-nav">
-        <li class="main-nav__item"><a class="active">Студия</a></li>
-        <li class="main-nav__item"><a href="#">Клиенты</a></li>
-        <li class="main-nav__item"><a href="catalog.html">Магазин</a></li>
-        <li class="main-nav__item"><a href="#">Контакты</a></li>
-      </ul>
-      <ul class="user-nav">
-        <li class="user-nav__item"><a class="user-nav__cart" href="#">Корзина</a></li>
-      </ul>
+    <nav class="nav">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Открыть меню">
+        <span class="nav__toggle-item"></span>
+      </button>
+      <div class="nav__wrapper">
+        <ul class="nav__main">
+          <li class="nav__item"><a class="nav__link nav__active">Студия</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Клиенты</a></li>
+          <li class="nav__item"><a class="nav__link" href="catalog.html">Магазин</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+        </ul>
+        <ul class="nav__user">
+          <li class="nav__item"><a class="nav__link nav__link--cart" href="#">Корзина</a></li>
+        </ul>
+      </div>
     </nav>
   </div>
 </header>
@@ -106,7 +116,7 @@
     <section class="about-us">
       <h2 class="visually-hidden">Про нашу компанию</h2>
       <p class="about-us__title">Мы — маленькая, но гордая
-        дизайн-студия из Краснодара. </p>
+        дизайн-студия из Краснодара.</p>
       <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет
         превыше креатива. Работаем не покладая рук, как роботы.</p>
       <p class="about-us__list-title">Выполняем заказы на разработку:</p>
@@ -179,8 +189,10 @@
   <div class="index-column container">
     <ul class="social">
       <li><a class="social__item vk" href="https://vk.com" target="_blank" rel="nofollow" title="Вконтакте"></a></li>
-      <li><a class="social__item fb" href="https://facebook.com" target="_blank" rel="nofollow" title="Фейсбук"></a></li>
-      <li><a class="social__item in" href="https://instagram.com" target="_blank" rel="nofollow" title="Инстаграм"></a></li>
+      <li><a class="social__item fb" href="https://facebook.com" target="_blank" rel="nofollow" title="Фейсбук"></a>
+      </li>
+      <li><a class="social__item in" href="https://instagram.com" target="_blank" rel="nofollow" title="Инстаграм"></a>
+      </li>
     </ul>
     <div class="page-footer__content">
       <p>Давайте дружить, это выгодно!</p>
