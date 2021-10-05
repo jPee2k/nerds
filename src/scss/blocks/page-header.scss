@@ -260,22 +260,22 @@
     position: static;
   }
 
-  /* --- TODO transition --- */
-
   .nav__wrapper {
     justify-content: space-between;
 
-    display: none;
     overflow: hidden;
+    max-height: 0;
+    opacity: 0;
 
-    transition: all 0.3s ease-out;
+    transform: translateY(-100%);
+    transition: all 0.2s ease-in;
   }
 
   .nav__wrapper--shown {
-    display: flex;
+    transform: translateY(0);
+    max-height: 100%;
+    opacity: 1;
   }
-
-  /* --- end TODO transition --- */
 
   .nav__toggle {
     position: absolute;
