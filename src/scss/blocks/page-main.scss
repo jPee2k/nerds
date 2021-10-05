@@ -6,6 +6,15 @@
   border-bottom: 2px solid $bg-header;
 }
 
+@media (max-width: $desktop-sm) {
+  .flex-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+    padding-bottom: 30px;
+  }
+}
+
 /* --- Catalogs --- */
 
 .page-main__title {

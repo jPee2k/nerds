@@ -1,58 +1,87 @@
 .about-us {
   max-width: 660px;
 
-  p {
-    color: $text-color;
-    font-size: 16px;
-    line-height: 24px;
-  }
+  color: $text-color;
+  font-size: 16px;
+  line-height: 24px;
+}
 
-  .about-us__title {
-    margin-top: 34px;
-    margin-bottom: 34px;
+.about-us__title {
+  margin-top: 34px;
+  margin-bottom: 34px;
 
-    font-weight: 500;
-    font-size: 45px;
-    line-height: 45px;
-  }
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+}
 
-  .about-us__list-title {
-    margin-top: 40px;
+.about-us__list-title {
+  margin-top: 40px;
 
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
-  .about-us__list {
-    margin: 0;
-    padding: 0;
+.about-us__list {
+  margin: 0;
+  padding: 0;
 
-    list-style-type: none;
-    color: $text-color;
-    line-height: 24px;
-  }
+  list-style-type: none;
+  color: $text-color;
+  line-height: 24px;
+}
 
-  .about-us__item {
-    position: relative;
+.about-us__item {
+  position: relative;
 
-    margin: 24px auto;
-    padding-left: 36px;
+  margin: 24px auto;
+  padding-left: 36px;
 
-    &::before {
-      position: absolute;
-      left: 1px;
-      top: 10px;
+  &::before {
+    position: absolute;
+    left: 1px;
+    top: 10px;
 
-      content: "";
-      height: 2px;
-      width: 25px;
-      background-color: $text-menu-hover;
-    }
+    content: "";
+    height: 2px;
+    width: 25px;
+    background-color: $text-menu-hover;
   }
 }
 
+@media (max-width: $tablet) {
+  .about-us__title {
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
 
+  .about-us__list-title {
+    margin-top: 26px;
+  }
 
+  .about-us__item {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
 
+@media (max-width: $mobile) {
+  .about-us__title {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 30px;
+    margin-bottom: 16px;
+  }
 
+  .about-us__list-title {
+    font-size: 15px;
+    margin-top: 22px;
+  }
 
+  .about-us__item {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
