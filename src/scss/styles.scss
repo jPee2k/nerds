@@ -47,12 +47,12 @@ body {
   padding: 16px 54px;
   height: 50px;
 
-  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  font-weight: 500;
   text-transform: uppercase;
-  color: white;
   text-decoration: none;
+  color: #ffffff;
 
   cursor: pointer;
 
@@ -123,46 +123,4 @@ body {
   animation-name: spinner;
   animation-duration: 1.2s;
   animation-iteration-count: infinite;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(-150%);
-  }
-  40% {
-    transform: translateY(15%);
-  }
-  60% {
-    transform: translateY(-15%);
-  }
-  80% {
-    transform: translateY(10%);
-  }
-  90% {
-    transform: translateY(-7%);
-  }
-  93% {
-    transform: translateY(5%);
-  }
-  96% {
-    transform: translateY(-3%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-
-@keyframes drag {
-  25% {
-    transform: translateX(-10px);
-  }
-  75% {
-    transform: translateX(10px);
-  }
-}
-
-@keyframes spinner {
-  to {
-    transform: rotate(360deg);
-  }
 }
