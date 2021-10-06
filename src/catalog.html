@@ -270,7 +270,7 @@
         <p>191186, Санкт-Петербург,<br>
           ул. Б. Конюшенная, д. 19/8</p>
         <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-        <button class="btn" type="button">Напишите нам</button>
+        <button class="btn address__btn" type="button">Напишите нам</button>
       </div>
     </div>
   </section>
@@ -293,17 +293,21 @@
   <h2 class="visually-hidden">Форма связи</h2>
   <p class="contact-us__title">Напишите нам</p>
   <form class="contact-us__form" method="POST" autocomplete="off" novalidate>
-    <div>
-      <label for="name">Ваше имя: <span>*</span></label>
-      <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+    <div class="input__wrapper contact-us__input">
+      <label class="input__label" for="name">Ваше имя: <span>*</span></label>
+      <input class="input" type="text" id="name" name="name" placeholder="Имя Фамилия">
+      <span class="text-error"></span>
     </div>
-    <div>
-      <label for="email">Ваш e-mail: <span>*</span></label>
-      <input type="email" id="email" name="email" placeholder="email@example.com">
+    <div class="input__wrapper contact-us__input">
+      <label class="input__label" for="email">Ваш e-mail: <span>*</span></label>
+      <input class="input" type="email" id="email" name="email" placeholder="email@example.com">
+      <span class="text-error"></span>
     </div>
-    <div>
-      <label for="message">Текст письма: <span>*</span></label>
-      <textarea id="message" name="message" cols="92" rows="5" placeholder="В свободной форме"></textarea>
+    <div class="textarea__wrapper contact-us__textarea">
+      <label class="textarea__label" for="message">Текст письма: <span>*</span></label>
+      <textarea class="textarea" id="message" name="message" cols="92" rows="5"
+                placeholder="В свободной форме"></textarea>
+      <span class="text-error"></span>
     </div>
     <button class="btn contact-us__btn" type="submit">Отправить</button>
   </form>

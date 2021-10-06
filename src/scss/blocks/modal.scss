@@ -11,43 +11,43 @@
 
   background-color: white;
   box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
+}
 
-  &.shown {
-    display: block;
+.modal--shown {
+  display: block;
 
-    animation-name: bounce;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: 1;
+  animation-name: bounce;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
+.modal--drag {
+  animation-name: drag;
+  animation-duration: 150ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 2;
+}
+
+.modal__close-btn {
+  position: absolute;
+  right: 90px;
+  top: 78px;
+  width: 21px;
+  height: 21px;
+
+  cursor: pointer;
+  border: none;
+  opacity: 0.3;
+  background: url('../images/svg/close-cross.svg') no-repeat;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
   }
 
-  &.drag {
-    animation-name: drag;
-    animation-duration: 150ms;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 2;
-  }
-
-  .modal__close-btn {
-    position: absolute;
-    right: 90px;
-    top: 78px;
-    width: 21px;
-    height: 21px;
-
-    cursor: pointer;
-    border: none;
-    opacity: 0.3;
-    background: url('../images/svg/close-cross.svg') no-repeat;
-
-    &:hover,
-    &:focus-visible {
-      opacity: 1;
-    }
-
-    &:active {
-      opacity: 0.1;
-    }
+  &:active {
+    opacity: 0.1;
   }
 }
 
@@ -64,21 +64,27 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
 
-  & > div {
+  .input__wrapper,
+  .textarea__wrapper {
     position: relative;
-  }
-
-  & > div:not(:last-of-type) {
     width: 360px;
   }
 
-  & > div:last-of-type {
+  .textarea__wrapper {
     width: 100%;
   }
 
-  label {
+  .contact-us__input {
+    margin-bottom: 12px;
+  }
+
+  .contact-us__textarea {
+    margin-bottom: 43px;
+  }
+
+  .input__label,
+  .textarea__label {
     display: block;
 
     font-size: 16px;
@@ -92,47 +98,25 @@
     }
   }
 
-  input,
-  textarea {
+  .input,
+  .textarea {
     padding: 15px;
     border: none;
     box-shadow: inset 0 0 0 2px #d7dcde;
     border-radius: 3px;
   }
 
-  input {
+  .input {
+    display: block;
     width: 100%;
     height: 50px;
-
-    margin-bottom: 34px;
   }
 
-  textarea {
+  .textarea {
     resize: none;
 
     width: 100%;
     height: 117px;
-
-    margin-bottom: 43px;
-  }
-
-  .text-error {
-    position: absolute;
-    bottom: 12px;
-    left: 13px;
-
-    font-size: 14px;
-    color: #fb565a;
-  }
-
-  textarea ~ .text-error {
-    bottom: 26px;
-  }
-
-  .max-count {
-    position: absolute;
-    top: 0;
-    right: 0;
   }
 
   .error {
@@ -140,9 +124,96 @@
     border-radius: 3px;
   }
 
+  .text-error {
+    display: inline-block;
+    font-size: 14px;
+    color: #fb565a;
+  }
+
+  .max-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.contact-us__btn {
+  position: relative;
+  min-width: 260px;
+  margin-bottom: 65px;
+}
+
+@media (max-width: $desktop-sm) {
+  .disable-scrolling {
+    overflow: hidden;
+  }
+
+  .modal {
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    min-height: unset;
+    padding: 6vw;
+
+    flex-wrap: wrap;
+    overflow-y: auto;
+
+    box-shadow: none;
+  }
+
+  .modal--shown {
+    display: flex;
+  }
+
+  .modal--shown,
+  .modal--drag {
+    animation: none;
+  }
+
+  .contact-us__form {
+    align-content: flex-start;
+    column-gap: 40px;
+
+    .input__wrapper {
+      width: unset;
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+  }
+
+  .contact-us__title {
+    margin: auto;
+    margin-bottom: 43px;
+  }
+
   .contact-us__btn {
-    position: relative;
-    min-width: 260px;
-    margin-bottom: 65px;
+    margin: 0 auto;
+  }
+
+  .modal__close-btn {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .contact-us__title {
+    margin-bottom: 30px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .contact-us__form .contact-us__textarea {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .contact-us__title {
+    font-size: 26px;
+    line-height: 26px;
   }
 }
