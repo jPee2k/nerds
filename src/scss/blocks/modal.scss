@@ -120,7 +120,7 @@
   }
 
   .error {
-    border: 2px solid #fb565a;
+    box-shadow: inset 0 0 0 2px #fb565a;
     border-radius: 3px;
   }
 
@@ -174,10 +174,10 @@
 
   .contact-us__form {
     align-content: flex-start;
-    column-gap: 40px;
+    column-gap: 4vw;
 
     .input__wrapper {
-      width: unset;
+      width: calc(50% - 4vw / 2);
       flex-grow: 1;
       flex-shrink: 1;
     }
@@ -215,5 +215,9 @@
   .contact-us__title {
     font-size: 26px;
     line-height: 26px;
+  }
+
+  .contact-us__form .input__wrapper {
+    width: auto;
   }
 }
