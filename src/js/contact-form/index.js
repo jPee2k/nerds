@@ -6,11 +6,12 @@ import textareaCounter from './textarea-counter.js';
 import sendData from './fetch.js';
 import { saveUserData, getUserData } from './storage.js';
 import {
-  renderErrors, playAnimation, renderSymbsCounter, renderChanges,
+  renderErrors, playAnimation, renderSymbsCounter, renderChanges, removeStyles,
 } from './view.js';
 
-const modalHandler = () => {
-  const btn = document.querySelector('.address .btn');
+const modalHandler = (form) => {
+  const body = document.querySelector('body');
+  const btn = document.querySelector('.address .address__btn');
   const modal = document.querySelector('.modal.contact-us');
   const closeBtn = modal.querySelector('.modal__close-btn');
   const nameInput = modal.querySelector('[name="name"]');
@@ -19,7 +20,8 @@ const modalHandler = () => {
 
   btn.addEventListener('click', (evt) => {
     evt.preventDefault();
-    modal.classList.add('shown');
+    modal.classList.add('modal--shown');
+    body.classList.add('disable-scrolling');
 
     nameInput.value = getUserData('name');
     emailInput.value = getUserData('email');
@@ -31,15 +33,20 @@ const modalHandler = () => {
     }
   });
 
-  closeBtn.addEventListener('click', (evt) => {
+  const closeModal = (evt) => {
     evt.preventDefault();
-    modal.classList.remove('shown', 'drag');
+    modal.classList.remove('modal--shown', 'modal--drag');
+    body.classList.remove('disable-scrolling');
+    removeStyles(form);
+  };
+
+  closeBtn.addEventListener('click', (evt) => {
+    closeModal(evt);
   });
 
   window.addEventListener('keydown', (evt) => {
-    if (evt.key === 'Escape' && modal.classList.contains('shown')) {
-      evt.preventDefault();
-      modal.classList.remove('shown', 'drag');
+    if (evt.key === 'Escape' && modal.classList.contains('modal--shown')) {
+      closeModal(evt);
     }
   });
 };
@@ -94,7 +101,7 @@ const app = () => {
     switch (path) {
       case 'contactUsForm.errors':
         renderErrors(state, form, value);
-        playAnimation('.modal', 'drag');
+        playAnimation('.modal', 'modal--drag');
         break;
       case 'contactUsForm.textarea.count':
         renderSymbsCounter(state);
@@ -107,7 +114,7 @@ const app = () => {
     }
   });
 
-  modalHandler();
+  modalHandler(form);
   formHandler(state, form);
   textareaCounter(state);
 };

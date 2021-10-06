@@ -4,7 +4,7 @@ const textareaCounter = (state) => {
   counter.classList.add('max-count');
   counter.setAttribute('hidden', 'true');
   counter.textContent = state.contactUsForm.textarea.count;
-  textArea.after(counter);
+  textArea.parentElement.append(counter);
 
   textArea.addEventListener('input', (evt) => {
     state.contactUsForm.textarea.count = evt.target.value.length;

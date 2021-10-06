@@ -1,4 +1,4 @@
-const removeStyles = (form) => {
+export const removeStyles = (form) => {
   const inputsWithError = form.querySelectorAll('.error');
   inputsWithError.forEach((input) => {
     input.classList.remove('error');
@@ -6,7 +6,7 @@ const removeStyles = (form) => {
 
   const existsErrors = form.querySelectorAll('span.text-error');
   existsErrors.forEach((error) => {
-    error.remove();
+    error.textContent = '';
   });
 };
 
@@ -15,13 +15,10 @@ export const renderErrors = (state, form, errors) => {
   const errorsEntries = Object.entries(errors);
   errorsEntries.forEach(([key, value]) => {
     const element = form.querySelector(`[name="${key}"]`);
-    const newError = document.createElement('span');
-
-    newError.classList.add('text-error');
-    newError.textContent = value.message;
+    const newError = element.nextElementSibling;
 
     element.classList.add('error');
-    element.after(newError);
+    newError.textContent = value.message;
 
     if (state.contactUsForm.timeoutId) {
       clearTimeout(state.contactUsForm.timeoutId);
@@ -72,7 +69,7 @@ export const renderChanges = (state, form, value) => {
       submitBtn.classList.remove('spinner');
       submitBtn.removeAttribute('disabled');
       textareaCounter.setAttribute('hidden', 'true');
-      modal.classList.remove('shown', 'drag');
+      modal.classList.remove('modal--shown', 'modal--drag');
       // TODO call success message
       alert('success');
       break;
