@@ -1,6 +1,7 @@
 const app = () => {
-  const navToggle = document.querySelector('.nav__toggle');
-  const navMenu = navToggle.parentElement.querySelector('.nav__wrapper');
+  const nav = document.querySelector('.nav');
+  const navToggle = nav.querySelector('.nav__toggle');
+  const navMenu = nav.querySelector('.nav__wrapper');
 
   const closeMenu = () => {
     navToggle.setAttribute('aria-expanded', 'false');
@@ -28,6 +29,8 @@ const app = () => {
 
   navToggle.addEventListener('click', onToggleClick);
   window.addEventListener('resize', closeMenu);
+
+  closeMenu();
 };
 
 export default app;
