@@ -4,9 +4,15 @@
   background-color: $bg-header;
 }
 
+.slider__list {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
 .slider__item {
   height: 423px;
   position: relative;
+  overflow: hidden;
 
   display: none;
   justify-content: flex-end;
@@ -74,8 +80,6 @@
   margin: 0;
   margin-left: 8px;
   padding: 0;
-
-  list-style: none;
 }
 
 .slider__nav-item {
@@ -84,8 +88,11 @@
   height: 18px;
   width: 18px;
 
+  margin: 0;
   margin-right: 17px;
+  padding: 0;
 
+  border: none;
   border-radius: 50%;
   background-color: white;
 
@@ -111,7 +118,6 @@
     align-items: center;
     justify-content: center;
     min-height: 400px;
-    padding-bottom: 50px;
   }
 
   .slider__img {

@@ -17,6 +17,10 @@ const state = {
     currMinValue: 0,
     currMaxValue: 15000,
   },
+  slider: {
+    slideIndex: 0,
+    timerId: null,
+  },
 };
 
 export default state;
