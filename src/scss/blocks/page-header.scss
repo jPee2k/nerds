@@ -50,6 +50,12 @@
 }
 
 @media (max-width: $tablet) {
+  .page-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
   .page-header .container {
     position: relative;
     flex-direction: column;

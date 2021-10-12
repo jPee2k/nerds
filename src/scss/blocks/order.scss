@@ -82,3 +82,26 @@
   width: 40px;
   margin-left: 38px;
 }
+
+@media (max-width: $desktop-sm) {
+  .order {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    margin-top: 20px;
+
+    .filter__legend {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      clip: rect(0 0 0 0);
+
+      font-size: 16px;
+    }
+  }
+
+  .filter__group--order {
+    align-self: flex-end;
+  }
+}

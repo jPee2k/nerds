@@ -36,8 +36,10 @@
   <h1 class="page-main__title">Магазин готовых шаблонов</h1>
 
   <div class="container grid-container">
-    <aside class="filter" tabindex="0">
+    <aside class="filter filter--hidden" tabindex="0">
+      <!--      TODO -> fix accessibility-->
       <h2 class="visually-hidden">Фильтр товаров</h2>
+      <button class="btn btn--gray filter__hide-button" type="button" aria-label="Фильтр товаров"></button>
 
       <form class="filter__form" id="form-filter" method="GET" autocomplete="off">
         <fieldset class="filter__group filter__group--range">
@@ -123,7 +125,6 @@
         </fieldset>
 
         <button class="btn btn--gray filter__btn" type="submit">Показать</button>
-        <button class="btn btn--gray filter__hide-button" type="button"></button>
       </form>
     </aside>
 

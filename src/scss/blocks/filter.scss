@@ -1,3 +1,7 @@
+.filter {
+  width: 260px;
+}
+
 /* --- fieldset --- */
 
 .filter__group {
@@ -201,18 +205,128 @@
 .filter__btn {
   margin-top: 40px;
   min-width: 260px;
+}
 
-  color: #000000;
-  background-color: $bg-header;
+.filter__hide-button {
+  display: none;
+  z-index: 6;
+}
 
-  &:hover,
-  &:focus-visible {
-    background-color: #dfdfdf;
+@media (max-width: $desktop-sm) {
+  .filter {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    width: 280px;
+
+    transition: 0.3s ease-in;
   }
 
-  &:active {
-    color: rgba(0, 0, 0, 0.3);
-    border-top: 2px solid #bfbfbf;
-    background-color: #d5d5d5;
+  .filter--hidden {
+    transform: translateX(-120%);
+    top: 32px;
+
+    .filter__hide-button {
+      top: -15px;
+      right: -126px;
+
+      height: 70px;
+      width: 70px;
+
+      border: 4px solid #dfdfdf;
+      box-shadow: inset 0 0 12px 0 #dfdfdf;
+
+      &::after {
+        left: 8px;
+        bottom: 8px;
+
+        width: 50px;
+        height: 50px;
+        transform: rotate(270deg);
+      }
+    }
+
+    .filter__form {
+      visibility: hidden;
+    }
+  }
+
+  .filter__hide-button {
+    position: absolute;
+    top: 10px;
+    right: -15px;
+
+    display: block;
+    padding: 0;
+
+    width: 50px;
+    height: 50px;
+    background-color: $bg-header;
+    border-radius: 50%;
+
+    border: 3px solid #dfdfdf;
+    box-shadow: inset 0 0 8px 0 #dfdfdf;
+    transition: 0.3s ease-out;
+
+    &::after {
+      content: url('../images/svg/arrow-down.svg');
+      position: absolute;
+      left: 10px;
+      bottom: 12px;
+      width: 35px;
+      height: 35px;
+      transform: rotate(90deg);
+      transform-origin: center;
+
+      transition: 0.2s linear;
+    }
+  }
+
+  .filter__form {
+    position: absolute;
+    left: -20px;
+
+    padding: 20px;
+    height: 90vh;
+    overflow-y: auto;
+    direction: rtl;
+
+    border: 4px solid $bg-header;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background-color: #ffffff;
+  }
+
+  .filter__legend--range {
+    margin-bottom: 13px;
+  }
+
+  .filter__group--range {
+    margin-top: 0;
+    direction: initial;
+  }
+
+  .filter__group--grid {
+    margin-top: 30px;
+    direction: initial;
+  }
+
+  .filter__group--addons {
+    margin-top: 30px;
+    direction: initial;
   }
 }
+
+@media (max-width: $tablet) {
+  .filter {
+    top: 86px;
+  }
+
+  .filter__form {
+    height: 70vh;
+  }
+}
+
+// TODO -> mobile version

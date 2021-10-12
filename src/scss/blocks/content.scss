@@ -1,3 +1,7 @@
+.content {
+  padding-left: 14px;
+}
+
 .content__list {
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, 360px));
@@ -87,4 +91,22 @@
 
 .card__btn {
   min-width: 200px;
+}
+
+@media (max-width: $desktop-sm) {
+  .content {
+    margin-top: 20px;
+    padding-left: 0;
+  }
+
+  .content__list {
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    justify-content: center;
+  }
+
+  .content__item {
+    img {
+      width: 100%;
+    }
+  }
 }
