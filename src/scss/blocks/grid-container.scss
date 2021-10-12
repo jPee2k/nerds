@@ -1,0 +1,26 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 132px 1fr;
+  grid-template-areas:
+    'filter order order'
+    'filter content content';
+
+  .filter {
+    grid-area: filter;
+  }
+
+  .order {
+    grid-area: order;
+  }
+
+  .content {
+    grid-area: content;
+  }
+}
+
+@media (max-width: $desktop-sm) {
+  .grid-container {
+    display: block;
+  }
+}
