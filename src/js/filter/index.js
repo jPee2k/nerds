@@ -1,6 +1,6 @@
 import onChange from 'on-change';
 import unwatchedState from '../state.js';
-import hideFilter from './hide.js';
+import filterHandler from './hide.js';
 
 const renderRange = (state, filter) => {
   const legend = document.querySelector('#form-filter .filter__legend--range');
@@ -145,7 +145,7 @@ const app = () => {
   syncInputValues(state, elements);
   fillColor(state, elements);
 
-  hideFilter();
+  filterHandler();
 };
 
 export default app;
