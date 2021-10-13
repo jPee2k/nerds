@@ -105,3 +105,26 @@
     align-self: flex-end;
   }
 }
+
+@media (max-width: $mobile) {
+  .order {
+    margin-left: 80px;
+  }
+
+  .order.no-js {
+    margin-left: auto;
+  }
+
+  .filter__group--order {
+    .input__label {
+      padding: 9px;
+
+      font-size: 13px;
+      line-height: 13px;
+    }
+  }
+
+  .order__direction {
+    margin-left: 3vw;
+  }
+}
