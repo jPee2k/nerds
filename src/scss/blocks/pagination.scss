@@ -3,7 +3,7 @@
   justify-content: flex-start;
   align-items: center;
 
-  height: 170px;
+  min-height: 170px;
 }
 
 .pagination__list {
@@ -11,7 +11,7 @@
   flex-wrap: wrap;
   gap: 9px;
 
-  margin: 0;
+  margin: 10px 0;
   padding: 0;
 
   list-style: none;
@@ -63,4 +63,11 @@
   color: rgba(0, 0, 0, 0.3);
   border-top: 1px solid #bfbfbf;
   background-color: #d5d5d5;
+}
+
+
+@media (max-width: $desktop-sm) {
+  .pagination {
+    justify-content: center;
+  }
 }
