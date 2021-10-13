@@ -91,7 +91,21 @@
     pointer-events: auto;
   }
 
-  //input[type="range"]:active::-webkit-slider-thumb{
-  //  box-shadow: 0 3px 2px 0 #cccdcd;
-  //}
+  input[type="range"]:focus-visible::-ms-thumb {
+    box-sizing: content-box;
+    box-shadow: none;
+    border: 2px solid #4d4d4d;
+  }
+
+  input[type="range"]:focus-visible::-moz-range-thumb {
+    box-sizing: content-box;
+    box-shadow: none;
+    border: 2px solid #4d4d4d;
+  }
+
+  input[type="range"]:focus-visible::-webkit-slider-thumb {
+    box-sizing: content-box;
+    box-shadow: none;
+    border: 2px solid #4d4d4d;
+  }
 }
