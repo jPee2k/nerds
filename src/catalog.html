@@ -8,7 +8,7 @@
   <title>Магазин готовых шаблонов</title>
 </head>
 <body>
-<header class="page-header">
+<header class="page-header no-js">
   <div class="container">
     <a class="header__logo" href="index.html">
       <img class="header__image" src="images/svg/nerds-logo.svg" height="65" width="160" alt="логотип компании Нёрдс">
@@ -36,10 +36,10 @@
   <h1 class="page-main__title">Магазин готовых шаблонов</h1>
 
   <div class="container grid-container">
-    <aside class="filter filter--hidden" tabindex="0">
-      <!--      TODO -> fix accessibility-->
+    <aside class="filter no-js" tabindex="0">
       <h2 class="visually-hidden">Фильтр товаров</h2>
-      <button class="btn btn--gray filter__hide-button" type="button" aria-label="Фильтр товаров"></button>
+      <button class="btn btn--gray filter__hide-button" type="button" aria-expanded="true"
+              aria-label="Свернуть фильтр товаров"></button>
 
       <form class="filter__form" id="form-filter" method="GET" autocomplete="off">
         <fieldset class="filter__group filter__group--range">
@@ -128,7 +128,7 @@
       </form>
     </aside>
 
-    <section class="order" tabindex="0">
+    <section class="order no-js" tabindex="0">
       <h2 class="filter__legend">Сортировать:</h2>
 
       <fieldset class="filter__group filter__group--order" form="form-filter">

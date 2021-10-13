@@ -56,6 +56,10 @@
     z-index: 10;
   }
 
+  .page-header.no-js {
+    position: static;
+  }
+
   .page-header .container {
     position: relative;
     flex-direction: column;

@@ -7,10 +7,20 @@ import runFilterApp from './filter/index.js';
 import runCardApp from './card/index.js';
 import runMenuApp from './main-menu/index.js';
 
-window.onload = () => {
+const enableJS = () => {
+  const elements = document.querySelectorAll('.no-js');
+
+  elements.forEach((element) => {
+    element.classList.remove('no-js');
+  });
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  enableJS();
+
   runContactFormApp();
   runSliderApp();
   runFilterApp();
   runCardApp();
   runMenuApp();
-};
+});
