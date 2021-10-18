@@ -1,7 +1,3 @@
-.content {
-  padding-left: 14px;
-}
-
 .content__list {
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, 360px));
@@ -14,11 +10,13 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+
+  max-width: 360px;
 }
 
 .browser-icon {
   width: 100%;
-  height: 100%;
+  height: auto;
 
   opacity: 0.12;
   transition: all 200ms ease-out;
@@ -26,6 +24,7 @@
 
 .card {
   position: relative;
+  background-color: $bg-header;
 }
 
 .card__footer {
@@ -96,7 +95,6 @@
 @media (max-width: $desktop-sm) {
   .content {
     margin-top: 20px;
-    padding-left: 0;
   }
 
   .content__list {
