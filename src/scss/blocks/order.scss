@@ -23,13 +23,13 @@
     opacity: 0.3;
   }
 
-  .input__label[for="ask"],
+  .input__label[for="asc"],
   .input__label[for="desc"] {
     padding-left: 0;
     padding-right: 0;
   }
 
-  .input__label[for="ask"]::before {
+  .input__label[for="asc"]::before {
     content: url("../images/svg/icon-up-dir.svg");
   }
 
@@ -47,7 +47,7 @@
     color: $text-menu-hover;
   }
 
-  .input__radio:focus-visible ~ .input__label[for="ask"]::before {
+  .input__radio:focus-visible ~ .input__label[for="asc"]::before {
     content: url("../images/svg/icon-up-dir_tomato.svg");
   }
 
