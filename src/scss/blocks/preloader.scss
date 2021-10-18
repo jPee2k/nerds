@@ -1,0 +1,28 @@
+.preloader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  background-color: rgba(134, 134, 134, 0.5);
+  z-index: 100;
+}
+
+.preloader__spinner {
+  $size: 100px;
+
+  position: absolute;
+  width: $size;
+  height: $size;
+
+  top: calc(50% - #{$size} / 2);
+  left: calc(50% - #{$size} / 2);
+
+  background: url('../images/svg/spinner.svg') no-repeat center;
+
+  animation-name: spinner;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}

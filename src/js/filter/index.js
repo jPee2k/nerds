@@ -136,7 +136,7 @@ const app = () => {
     return;
   }
 
-  const initState = unwatchedState.catalogFilter;
+  const initState = unwatchedState.filterPriceRange;
   const elements = renderRange(initState, filter);
   const state = renderChanges(initState, elements);
 

@@ -9,7 +9,15 @@ const state = {
       maxCount: 1024,
     },
   },
-  catalogFilter: {
+  productFilter: {
+    processState: 'filling', // sending, success, error
+    products: [],
+    queryParams: [],
+    errors: [],
+    page: 1,
+    offset: 6,
+  },
+  filterPriceRange: {
     min: 0,
     max: 21500,
     step: 50,
