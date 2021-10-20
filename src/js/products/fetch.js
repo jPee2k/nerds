@@ -22,8 +22,9 @@ const getProducts = (state) => {
       state.products = prepareProducts(state, data); // temp => while has not backend
     })
     .catch((err) => {
-      state.processState = 'error';
       state.error = err.message;
+      state.processState = 'error';
+      throw new Error(err.message);
     });
 };
 

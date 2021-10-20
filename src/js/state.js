@@ -13,7 +13,7 @@ const state = {
     processState: 'filling', // sending, success, error
     products: [],
     queryParams: [],
-    errors: [],
+    error: null,
     page: 1,
     offset: 6,
   },

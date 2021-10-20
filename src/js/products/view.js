@@ -26,7 +26,6 @@ export const renderProcess = (state, processState) => {
     case 'error':
       removePreloader();
       filterButton.removeAttribute('disabled');
-      console.error(state.error);
       break;
     case 'sending':
       addPreloader();
