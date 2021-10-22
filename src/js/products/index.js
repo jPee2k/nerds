@@ -3,7 +3,7 @@ import onChange from 'on-change';
 import unwatchedState from '../state.js';
 import getProducts from './fetch.js';
 import {
-  renderProcess, renderProducts, renderMessage, removeMessage, removeContent, scrollToFirstProduct,
+  renderProcess, renderProducts, renderMessage, removeMessage, removeContent, scrollTo,
 } from './view.js';
 import { sortProducts } from './mock.js';
 import renderPagination from './pagination.js';
@@ -33,12 +33,11 @@ const app = () => {
         if (value[state.page - 1]) {
           renderProducts(value[state.page - 1]);
           renderPagination(state);
-          scrollToFirstProduct();
         }
         break;
       case 'page':
         renderProducts(state.paginatedProducts[value - 1]);
-        scrollToFirstProduct();
+        scrollTo('.card');
         break;
       case 'queryParams':
         if (!_.isEqual(value, preV)) {

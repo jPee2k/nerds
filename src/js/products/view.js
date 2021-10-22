@@ -90,8 +90,7 @@ export const renderMessage = (selector, message) => {
   element.append(p);
 };
 
-export const scrollToFirstProduct = () => {
-  // TODO scroll to first product
-  // const firstProduct = document.querySelector('.card');
-  // firstProduct?.focus();
+export const scrollTo = (selector) => {
+  const element = document.querySelector(selector);
+  element.scrollIntoView({ block: 'center', behavior: 'smooth' });
 };
