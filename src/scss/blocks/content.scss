@@ -3,6 +3,8 @@
   grid-template-columns: repeat(2, minmax(auto, 360px));
   column-gap: 40px;
   row-gap: 33px;
+
+  margin-bottom: 50px;
 }
 
 .content__item {
@@ -106,5 +108,11 @@
     img {
       width: 100%;
     }
+  }
+}
+
+@media (max-width: $tablet) {
+  .content__list {
+    margin-bottom: 20px;
   }
 }
