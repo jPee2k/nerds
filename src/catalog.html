@@ -60,7 +60,14 @@
         <fieldset class="filter__group filter__group--grid">
           <legend class="filter__legend">Сетка:</legend>
           <div class="input__wrapper">
-            <input class="input input__radio" type="radio" id="grid-adaptive" name="grid" value="adaptive" checked>
+            <input class="input input__radio" type="radio" id="grid-all" name="grid" value="all" checked>
+            <label class="input__label input__label--radio" for="grid-all">
+              Всех типов
+              <span class="input__icon"></span>
+            </label>
+          </div>
+          <div class="input__wrapper">
+            <input class="input input__radio" type="radio" id="grid-adaptive" name="grid" value="adaptive">
             <label class="input__label input__label--radio" for="grid-adaptive">
               Адаптивная
               <span class="input__icon"></span>
@@ -75,7 +82,7 @@
 
           </div>
           <div class="input__wrapper">
-            <input class="input input__radio" type="radio" id="grid-flexible" name="grid" value="flexible" disabled>
+            <input class="input input__radio" type="radio" id="grid-flexible" name="grid" value="flexible">
             <label class="input__label input__label--radio" for="grid-flexible">
               Резиновая
               <span class="input__icon"></span>
@@ -86,7 +93,7 @@
         <fieldset class="filter__group filter__group--addons">
           <legend class="filter__legend">Особенности:</legend>
           <div class="input__wrapper">
-            <input class="input input__checkbox" type="checkbox" id="add-slider" name="addons" value="slider" checked>
+            <input class="input input__checkbox" type="checkbox" id="add-slider" name="addons" value="slider">
             <label class="input__label input__label--checkbox" for="add-slider">
               Слайдер
               <span class="input__icon"></span>
@@ -101,22 +108,21 @@
             </label>
           </div>
           <div class="input__wrapper">
-            <input class="input input__checkbox" type="checkbox" id="add-news" name="addons" value="news" checked>
+            <input class="input input__checkbox" type="checkbox" id="add-news" name="addons" value="news">
             <label class="input__label input__label--checkbox" for="add-news">
               Новости
               <span class="input__icon"></span>
             </label>
           </div>
           <div class="input__wrapper">
-            <input class="input input__checkbox" type="checkbox" id="add-gallery" name="addons" value="gallery" checked
-                   disabled>
+            <input class="input input__checkbox" type="checkbox" id="add-gallery" name="addons" value="gallery">
             <label class="input__label input__label--checkbox" for="add-gallery">
               Галерея
               <span class="input__icon"></span>
             </label>
           </div>
           <div class="input__wrapper">
-            <input class="input input__checkbox" type="checkbox" id="add-cart" name="addons" value="cart" disabled>
+            <input class="input input__checkbox" type="checkbox" id="add-cart" name="addons" value="cart">
             <label class="input__label input__label--checkbox" for="add-cart">
               Корзина
               <span class="input__icon"></span>
@@ -134,8 +140,7 @@
       <fieldset class="filter__group filter__group--order" form="form-filter">
         <div class="order__values">
           <div class="input__wrapper">
-            <input class="input input__radio" type="radio" form="form-filter" id="by-price" name="order" value="price"
-                   checked>
+            <input class="input input__radio" type="radio" form="form-filter" id="by-price" name="order" value="price">
             <label class="input__label input__label--radio" for="by-price">По цене</label>
           </div>
           <div class="input__wrapper">
@@ -153,7 +158,7 @@
             <label class="input__label input__label--radio" for="desc" aria-label="По убыванию"></label>
           </div>
           <div class="input__wrapper">
-            <input class="input input__radio" type="radio" form="form-filter" id="asc" name="direction" value="asc" checked>
+            <input class="input input__radio" type="radio" form="form-filter" id="asc" name="direction" value="asc">
             <label class="input__label input__label--radio" for="asc" aria-label="По возрастанию"></label>
           </div>
         </div>
