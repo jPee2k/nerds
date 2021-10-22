@@ -20,14 +20,14 @@ const trimPagination = (buttons, activePage, buttonsNearestActiveCount = 1, firs
     splicedButtons.splice(
       afterActiveIndex + 1,
       lastIndex - afterActiveIndex - first,
-      restButton.cloneNode(true)
+      restButton.cloneNode(true),
     );
   }
   if (activeIndex >= activeWithNearest) {
     splicedButtons.splice(
       first,
       beforeActiveIndex - first,
-      restButton.cloneNode(true)
+      restButton.cloneNode(true),
     );
   }
   return splicedButtons;
