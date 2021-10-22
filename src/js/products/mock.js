@@ -5,8 +5,8 @@ import _ from 'lodash';
  * while backend is not ready
  */
 
-const grid = ['adaptive', 'fixed']; // ['adaptive', 'fixed', 'flexible'];
-const addons = ['slider', 'advantages', 'news']; // ['slider', 'advantages', 'news', 'gallery', 'cart'];
+const grid = ['adaptive', 'fixed', 'flexible'];
+const addons = ['slider', 'advantages', 'news', 'gallery', 'cart'];
 
 const filterProducts = (products, queryParams) => {
   if (!queryParams) {
@@ -24,7 +24,7 @@ const filterProducts = (products, queryParams) => {
     });
   }
 
-  if (_.has(queryParams, 'grid')) {
+  if (_.has(queryParams, 'grid') && queryParams?.grid !== 'all') {
     filteredProducts = filteredProducts.filter((product) => product.grid === queryParams.grid);
   }
 
@@ -51,13 +51,13 @@ export const sortProducts = (products, queryParams) => {
       sortedBy = _.sortBy(products, (product) => product.title);
       break;
     case 'type':
-      sortedBy = _.sortBy(products, (product) => product.id);
+      sortedBy = _.sortBy(products, (product) => product.grid);
       break;
     default:
       sortedBy = products;
   }
 
-  if (queryParams.direction === 'asc' && products !== sortedBy) {
+  if (queryParams.direction === 'desc' && products !== sortedBy) {
     sortedBy = sortedBy.reverse();
   }
 

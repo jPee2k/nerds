@@ -26,6 +26,7 @@ export const renderProcess = (state, processState) => {
     case 'error':
       removePreloader();
       filterButton.removeAttribute('disabled');
+      // TODO -> show error from state.error instead of products
       break;
     case 'sending':
       addPreloader();
@@ -36,9 +37,11 @@ export const renderProcess = (state, processState) => {
   }
 };
 
-export const renderProducts = ({ products }) => {
-  const contentList = document.querySelector('.content__list');
-  const wrapper = document.createElement('div');
+export const renderProducts = (products) => {
+  const content = document.querySelector('.content');
+  const contentList = content.querySelector('.content__list');
+  const newContentList = document.createElement('div');
+  newContentList.classList.add('content__list');
 
   products.forEach((product) => {
     const article = (
@@ -54,8 +57,41 @@ export const renderProducts = ({ products }) => {
         </footer>
       </article>`
     );
-    wrapper.insertAdjacentHTML('afterbegin', article);
+    newContentList.insertAdjacentHTML('beforeend', article);
   });
 
-  contentList.innerHTML = wrapper.innerHTML;
+  if (contentList) {
+    content.replaceChild(newContentList, contentList);
+  } else {
+    content.append(newContentList);
+  }
+};
+
+export const removeContent = () => {
+  const contentList = document.querySelector('.content__list');
+  contentList?.remove();
+  const pagination = document.querySelector('.pagination');
+  pagination?.remove();
+};
+
+export const removeMessage = () => {
+  const message = document.querySelector('.message');
+  message?.remove();
+};
+
+export const renderMessage = (selector, message) => {
+  removeMessage();
+
+  const element = document.querySelector(selector);
+  const p = document.createElement('p');
+  p.classList.add('message');
+  p.textContent = message;
+
+  element.append(p);
+};
+
+export const scrollToFirstProduct = () => {
+  // TODO scroll to first product
+  // const firstProduct = document.querySelector('.card');
+  // firstProduct?.focus();
 };
