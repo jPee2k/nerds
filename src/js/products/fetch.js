@@ -7,7 +7,7 @@ const setParams = (url, data) => {
 };
 
 const getProducts = (state) => {
-  const baseUrl = 'https://random-data-api.com/api/commerce/random_commerce?size=30';
+  const baseUrl = `https://random-data-api.com/api/commerce/random_commerce?size=${state.productsCount}`;
   const url = new URL(baseUrl);
 
   if (state.queryParams) {
@@ -18,11 +18,14 @@ const getProducts = (state) => {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
+      if (data.error) {
+        throw new Error(data.error);
+      }
       state.processState = 'success';
       state.products = prepareProducts(state, data); // temp => while has not backend
     })
     .catch((err) => {
-      state.error = err.message;
+      state.error = 'Ой, что-то пошло не так! =(';
       state.processState = 'error';
       throw new Error(err.message);
     });

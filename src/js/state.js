@@ -13,6 +13,7 @@ const state = {
     processState: 'filling', // sending, success, error
     products: [],
     queryParams: [],
+    productsCount: 99, // max count === 100
     error: null,
     page: 1,
     offset: 6,
