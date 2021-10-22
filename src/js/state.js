@@ -14,6 +14,7 @@ const state = {
     products: [],
     queryParams: [],
     productsCount: 99, // max count === 100
+    paginatedProducts: [],
     error: null,
     page: 1,
     offset: 6,

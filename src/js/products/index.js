@@ -1,9 +1,12 @@
 import _ from 'lodash';
 import onChange from 'on-change';
-import { renderProcess, renderProducts } from './view.js';
-import getProducts from './fetch.js';
 import unwatchedState from '../state.js';
+import getProducts from './fetch.js';
+import {
+  renderProcess, renderProducts, renderMessage, removeMessage, removeContent, scrollToFirstProduct,
+} from './view.js';
 import { sortProducts } from './mock.js';
+import renderPagination from './pagination.js';
 
 const app = () => {
   const filterForm = document.querySelector('#form-filter');
@@ -18,7 +21,24 @@ const app = () => {
         renderProcess(state, value);
         break;
       case 'products':
-        renderProducts(state);
+        if (value.length) {
+          removeMessage();
+          state.paginatedProducts = _.chunk(value, state.offset);
+        } else {
+          removeContent();
+          renderMessage('.content', 'Извините, но по вашему запросу ничего не найдено =(');
+        }
+        break;
+      case 'paginatedProducts':
+        if (value[state.page - 1]) {
+          renderProducts(value[state.page - 1]);
+          renderPagination(state);
+          scrollToFirstProduct();
+        }
+        break;
+      case 'page':
+        renderProducts(state.paginatedProducts[value - 1]);
+        scrollToFirstProduct();
         break;
       case 'queryParams':
         if (!_.isEqual(value, preV)) {
@@ -42,22 +62,26 @@ const app = () => {
     data.page = state.page;
     data.offset = state.offset;
 
+    state.page = 1;
     state.queryParams = data;
   });
 
   /*
    *  Order
    */
-  const order = document.querySelectorAll('.order input');
-  order.forEach((input) => {
+  const orderInputs = document.querySelectorAll('.order input');
+  orderInputs.forEach((input) => {
     input.addEventListener('change', () => {
       const checkedInputs = document.querySelectorAll('.order input:checked');
+      // TODO auto pick direction asc
       const queryParams = [...checkedInputs].reduce((acc, checkedInput) => {
         acc[checkedInput.name] = checkedInput.value;
         return acc;
       }, {});
 
-      // state.queryParams = { ...state.queryParams, ...queryParams }; // for backend
+      // for backend
+      // state.queryParams = { ...state.queryParams, ...queryParams };
+      state.page = 1;
       state.products = sortProducts(state.products, queryParams);
     });
   });
