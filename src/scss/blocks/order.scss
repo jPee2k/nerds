@@ -45,6 +45,7 @@
 
   .input__radio:focus-visible ~ .input__label {
     color: $text-menu-hover;
+    opacity: 1;
   }
 
   .input__radio:focus-visible ~ .input__label[for="asc"]::before {

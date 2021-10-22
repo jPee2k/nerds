@@ -71,9 +71,20 @@ const app = () => {
    */
   const orderInputs = document.querySelectorAll('.order input');
   orderInputs.forEach((input) => {
-    input.addEventListener('change', () => {
+    input.addEventListener('change', (evt) => {
+      const checkedOrder = document.querySelector('.order input[name="order"]:checked');
+      const checkedDirection = document.querySelector('.order input[name="direction"]:checked');
+
+      // auto pick direction / order
+      if (evt.target.name === 'order' && !checkedDirection) {
+        const direction = document.querySelector('.order input[name="direction"][value="asc"]');
+        direction.checked = true;
+      } else if (evt.target.name === 'direction' && !checkedOrder) {
+        const order = document.querySelector('.order input[name="order"]');
+        order.checked = true;
+      }
+
       const checkedInputs = document.querySelectorAll('.order input:checked');
-      // TODO auto pick direction asc
       const queryParams = [...checkedInputs].reduce((acc, checkedInput) => {
         acc[checkedInput.name] = checkedInput.value;
         return acc;
