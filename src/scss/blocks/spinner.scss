@@ -1,0 +1,16 @@
+.spinner {
+  color: transparent;
+}
+
+.spinner::after {
+  content: url("../images/svg/spinner.svg");
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  height: 30px;
+  width: 30px;
+
+  animation-name: spinner;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
