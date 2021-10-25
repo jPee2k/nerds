@@ -1,14 +1,15 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 // const CopyPlugin = require('copy-webpack-plugin');
 
-const multipleHtmlPlugins = ['index', 'catalog']
+const pages = ['index.html', 'catalog.html'];
+const multipleHtmlPlugins = pages
   .map((templateName) => {
     return new HtmlWebpackPlugin({
-      filename: path.resolve(__dirname, `dist/${templateName}.html`),
-      template: `src/${templateName}.html`,
+      filename: path.resolve(__dirname, `dist/${templateName}`),
+      template: `src/${templateName}`,
     });
   });
 
@@ -76,15 +77,17 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/bundle.css',
     }),
-    // new FaviconsWebpackPlugin({
-    //   logo: path.resolve(__dirname, 'src/images/icons/favicon-512.png'),
-    //   prefix: '',
-    //   publicPath: 'images/favicons',
-    //   outputPath: path.resolve(__dirname, 'dist/images/favicons'),
-    //   inject: (htmlPlugin) => [
-    //     'index.html',
-    //   ].includes(path.basename(htmlPlugin.options.filename)),
-    // }),
+    new FaviconsWebpackPlugin({
+      logo: path.resolve(__dirname, 'src/images/icons/favicon-512.png'),
+      prefix: '',
+      publicPath: 'images/favicons',
+      outputPath: path.resolve(__dirname, 'dist/images/favicons'),
+      inject: (htmlPlugin) => pages.includes(path.basename(htmlPlugin.options.filename)),
+      favicons: {
+        appName: 'Nerds',
+        developerName: 'jPee',
+      },
+    }),
     // new CopyPlugin({
     //   patterns: [
     //     { from: 'src/media/sounds', to: 'media/sounds' },
