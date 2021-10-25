@@ -42,10 +42,11 @@ const renderPaginationButtons = (state, newPagination) => {
     const li = document.createElement('li');
     const a = document.createElement('a');
     a.classList.add('pagination__link');
-    a.setAttribute('href', `?page=${page}`);
     a.textContent = page;
     if (state.page === page) {
       a.classList.add('pagination__link--active');
+    } else {
+      a.setAttribute('href', `?page=${page}`);
     }
     li.append(a);
     return li;
