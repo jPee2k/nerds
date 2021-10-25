@@ -131,6 +131,13 @@
   &:active {
     opacity: 0.3;
   }
+
+  &:not([href]):not(.nav__active) {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+  }
 }
 
 .nav__active {
