@@ -1,3 +1,5 @@
+import { showCardData } from './card/index.js';
+
 const addPreloader = () => {
   const body = document.querySelector('body');
   const preloader = document.createElement('div');
@@ -15,6 +17,29 @@ const removePreloader = () => {
   });
 };
 
+export const removeContent = () => {
+  const contentList = document.querySelector('.content__list');
+  contentList?.remove();
+  const pagination = document.querySelector('.pagination');
+  pagination?.remove();
+};
+
+export const removeMessage = () => {
+  const message = document.querySelector('.message');
+  message?.remove();
+};
+
+export const renderMessage = (selector, message) => {
+  removeMessage();
+
+  const element = document.querySelector(selector);
+  const p = document.createElement('p');
+  p.classList.add('message');
+  p.textContent = message;
+
+  element.append(p);
+};
+
 export const renderProcess = (state, processState) => {
   const filterButton = document.querySelector('.filter__btn');
 
@@ -22,11 +47,13 @@ export const renderProcess = (state, processState) => {
     case 'success':
       removePreloader();
       filterButton.removeAttribute('disabled');
+      removeMessage();
       break;
     case 'error':
       removePreloader();
       filterButton.removeAttribute('disabled');
-      // TODO -> show error from state.error instead of products
+      removeContent();
+      renderMessage('.content', state.error);
       break;
     case 'sending':
       addPreloader();
@@ -59,35 +86,13 @@ export const renderProducts = (products) => {
     );
     newContentList.insertAdjacentHTML('beforeend', article);
   });
+  showCardData(newContentList);
 
   if (contentList) {
     content.replaceChild(newContentList, contentList);
   } else {
     content.append(newContentList);
   }
-};
-
-export const removeContent = () => {
-  const contentList = document.querySelector('.content__list');
-  contentList?.remove();
-  const pagination = document.querySelector('.pagination');
-  pagination?.remove();
-};
-
-export const removeMessage = () => {
-  const message = document.querySelector('.message');
-  message?.remove();
-};
-
-export const renderMessage = (selector, message) => {
-  removeMessage();
-
-  const element = document.querySelector(selector);
-  const p = document.createElement('p');
-  p.classList.add('message');
-  p.textContent = message;
-
-  element.append(p);
 };
 
 export const scrollTo = (selector) => {
