@@ -1,5 +1,5 @@
-const showCardData = () => {
-  const cardButtons = [...document.querySelectorAll('.card .card__btn')];
+export const showCardData = (element = document) => {
+  const cardButtons = [...element.querySelectorAll('.card .card__btn')];
 
   if (cardButtons.length === 0) {
     return;
