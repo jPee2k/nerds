@@ -2,7 +2,7 @@
 
 Just learning and practicing (html / scss / js)
 
-[https://nerds-mu.vercel.app/](try on Vercel)
+[try on Vercel](https://nerds-mu.vercel.app/)
 
  #### TODO:
  - success-modal
